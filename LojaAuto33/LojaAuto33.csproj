@@ -58,6 +58,12 @@
     <Compile Include="fmrCadFunc.Designer.cs">
       <DependentUpon>fmrCadFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadClie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadClie.Designer.cs">
+      <DependentUpon>frmCadClie.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fmrCadFunc.resx">
       <DependentUpon>fmrCadFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadClie.resx">
+      <DependentUpon>frmCadClie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
