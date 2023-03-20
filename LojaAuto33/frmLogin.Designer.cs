@@ -77,6 +77,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(108, 73);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(146, 20);
             this.textBox2.TabIndex = 4;
             // 
@@ -92,7 +93,7 @@
             // 
             this.btnLogar.Location = new System.Drawing.Point(73, 196);
             this.btnLogar.Name = "btnLogar";
-            this.btnLogar.Size = new System.Drawing.Size(85, 40);
+            this.btnLogar.Size = new System.Drawing.Size(85, 31);
             this.btnLogar.TabIndex = 6;
             this.btnLogar.Text = "Logar";
             this.btnLogar.UseVisualStyleBackColor = true;
@@ -102,16 +103,17 @@
             // 
             this.btnLimpar.Location = new System.Drawing.Point(220, 196);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(85, 40);
+            this.btnLimpar.Size = new System.Drawing.Size(85, 31);
             this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSair
             // 
             this.btnSair.Location = new System.Drawing.Point(143, 260);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(85, 40);
+            this.btnSair.Size = new System.Drawing.Size(85, 29);
             this.btnSair.TabIndex = 8;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;

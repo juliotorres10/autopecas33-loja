@@ -15,4 +15,11 @@ C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\bin\Debug\CircularProg
 C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.csproj.CopyComplete
 C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmLogin.resources
 C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmMenu.resources
-C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.fmrCadFunc.resources
+C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmCadClie.resources
+C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmCadForn.resources
+C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmCadProd.resources
+C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmControlCaixa.resources
+C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmControlEstoque.resources
+C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmPedDeCompra.resources
+C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmTrocaProd.resources
+C:\Users\julio.ctorres\source\repos\LojaAuto33\LojaAuto33\obj\Debug\LojaAuto33.frmCadFunc.resources

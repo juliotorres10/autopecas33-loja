@@ -1,6 +1,6 @@
 ﻿namespace LojaAuto33
 {
-    partial class fmrCadFunc
+    partial class frmCadFunc
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,6 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnApagar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -200,57 +199,50 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(81, 398);
+            this.btnCadastrar.Location = new System.Drawing.Point(81, 396);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(103, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(103, 26);
             this.btnCadastrar.TabIndex = 18;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             // 
-            // btnApagar
-            // 
-            this.btnApagar.Location = new System.Drawing.Point(199, 398);
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(108, 24);
-            this.btnApagar.TabIndex = 19;
-            this.btnApagar.Text = "APAGAR";
-            this.btnApagar.UseVisualStyleBackColor = true;
-            // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(313, 398);
+            this.btnPesquisar.Location = new System.Drawing.Point(294, 396);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(93, 23);
+            this.btnPesquisar.Size = new System.Drawing.Size(93, 26);
             this.btnPesquisar.TabIndex = 20;
             this.btnPesquisar.Text = "PESQUISAR";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(412, 398);
+            this.btnAlterar.Location = new System.Drawing.Point(393, 396);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(84, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(84, 26);
             this.btnAlterar.TabIndex = 21;
             this.btnAlterar.Text = "ALTERAR";
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(502, 396);
+            this.btnVoltar.Location = new System.Drawing.Point(483, 398);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(93, 26);
+            this.btnVoltar.Size = new System.Drawing.Size(93, 23);
             this.btnVoltar.TabIndex = 22;
             this.btnVoltar.Text = "VOLTAR";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(611, 396);
+            this.btnLimpar.Location = new System.Drawing.Point(190, 396);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 26);
             this.btnLimpar.TabIndex = 23;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // fmrCadFunc
             // 
@@ -261,7 +253,6 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
@@ -283,6 +274,7 @@
             this.Controls.Add(this.lblNome);
             this.Name = "fmrCadFunc";
             this.Text = "CADSTRO DE FUNCIONÁRIOS";
+            this.Load += new System.EventHandler(this.fmrCadFunc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +301,6 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace LojaAuto33
 {
-    public partial class frmCadForn : Form
+    public partial class frmControlEstoque : Form
     {
-        public frmCadForn()
+        public frmControlEstoque()
         {
             InitializeComponent();
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            Controls.OfType<TextBox>().Concat<Control>(Controls.OfType<ComboBox>()).
-           Concat<Control>(Controls.OfType<CheckBox>()).ToList().ForEach(control => control.Text = "");
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -28,6 +22,12 @@ namespace LojaAuto33
             frmMenu menu = new frmMenu();
             menu.Show();
             this.Close();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            Controls.OfType<TextBox>().Concat<Control>(Controls.OfType<ComboBox>()).
+          Concat<Control>(Controls.OfType<CheckBox>()).ToList().ForEach(control => control.Text = "");
         }
     }
 }

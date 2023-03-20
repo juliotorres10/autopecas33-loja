@@ -18,13 +18,25 @@ namespace LojaAuto33
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
 
+            
+        {
+            // Seu código de login aqui
+            MessageBox.Show("Logado com sucesso!");
+            this.Hide(); // oculta o formulário de login
+            frmMenu menu = new frmMenu(); // cria um novo formulário de menu
+            menu.Show(); // exibe o formulário de menu
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
         }
     }
 }

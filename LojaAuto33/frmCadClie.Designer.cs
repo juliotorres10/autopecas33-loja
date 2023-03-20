@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadClie));
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblRG = new System.Windows.Forms.Label();
@@ -224,6 +225,7 @@
             this.btnVoltar.TabIndex = 20;
             this.btnVoltar.Text = "VOLTAR";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnLimpar
             // 
@@ -233,6 +235,7 @@
             this.btnLimpar.TabIndex = 21;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // frmCadClie
             // 
@@ -261,6 +264,7 @@
             this.Controls.Add(this.lblRG);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.lblNome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadClie";
             this.Text = "CADASTRO DE CLIENTES";
             this.ResumeLayout(false);

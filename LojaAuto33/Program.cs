@@ -16,7 +16,7 @@ namespace LojaAuto33
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_splash());
+            Application.Run(new frmMenu());
         }
     }
 }
