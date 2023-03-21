@@ -29,5 +29,17 @@ namespace LojaAuto33
             Controls.OfType<TextBox>().Concat<Control>(Controls.OfType<ComboBox>()).
           Concat<Control>(Controls.OfType<CheckBox>()).ToList().ForEach(control => control.Text = "");
         }
+
+        private void btnCadProd_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cadastrado com sucesso!", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesqProd pesqProd = new frmPesqProd();
+            pesqProd.Show();
+            this.Close();
+        }
     }
 }

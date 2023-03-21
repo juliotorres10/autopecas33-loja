@@ -29,5 +29,10 @@ namespace LojaAuto33
             menu.Show();
             this.Close();
         }
+
+        private void btnCad_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cadastrado com sucesso!", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
     }
 }

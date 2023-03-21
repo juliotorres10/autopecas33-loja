@@ -103,9 +103,9 @@
             // 
             // btnCad
             // 
-            this.btnCad.Location = new System.Drawing.Point(12, 397);
+            this.btnCad.Location = new System.Drawing.Point(12, 399);
             this.btnCad.Name = "btnCad";
-            this.btnCad.Size = new System.Drawing.Size(127, 41);
+            this.btnCad.Size = new System.Drawing.Size(127, 39);
             this.btnCad.TabIndex = 6;
             this.btnCad.Text = "CADASTRAR";
             this.btnCad.UseVisualStyleBackColor = true;

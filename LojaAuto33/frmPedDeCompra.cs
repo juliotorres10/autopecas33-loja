@@ -28,7 +28,7 @@ namespace LojaAuto33
         private void btnCad_Click(object sender, EventArgs e)
         {
             // Mensagem cadstro produto usando clique no botão cadastrar
-            MessageBox.Show("Produto Cadastrado com sucesso!");
+            MessageBox.Show("Pedido Cadastrado com sucesso!");
         }
 
         private void button2_Click(object sender, EventArgs e)

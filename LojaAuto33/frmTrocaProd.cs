@@ -29,5 +29,15 @@ namespace LojaAuto33
             Controls.OfType<TextBox>().Concat<Control>(Controls.OfType<ComboBox>()).
             Concat<Control>(Controls.OfType<CheckBox>()).ToList().ForEach(control => control.Text = "");
         }
+
+        private void btnDevolocao_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Devolução bem sucedida!", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

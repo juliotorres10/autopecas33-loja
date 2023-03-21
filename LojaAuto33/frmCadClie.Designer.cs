@@ -46,7 +46,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnApagar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -189,28 +188,21 @@
             this.btnCadastrar.TabIndex = 16;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            // 
-            // btnApagar
-            // 
-            this.btnApagar.Location = new System.Drawing.Point(139, 407);
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(126, 31);
-            this.btnApagar.TabIndex = 17;
-            this.btnApagar.Text = "APAGAR";
-            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(271, 407);
+            this.btnPesquisar.Location = new System.Drawing.Point(139, 407);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(108, 31);
             this.btnPesquisar.TabIndex = 18;
             this.btnPesquisar.Text = "PESQUISAR";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(385, 408);
+            this.btnAlterar.Location = new System.Drawing.Point(253, 408);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(118, 30);
             this.btnAlterar.TabIndex = 19;
@@ -219,7 +211,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(509, 409);
+            this.btnVoltar.Location = new System.Drawing.Point(377, 407);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(97, 31);
             this.btnVoltar.TabIndex = 20;
@@ -229,7 +221,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(612, 409);
+            this.btnLimpar.Location = new System.Drawing.Point(480, 409);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(106, 29);
             this.btnLimpar.TabIndex = 21;
@@ -246,7 +238,6 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
@@ -291,7 +282,6 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;

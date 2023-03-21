@@ -59,6 +59,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadFunc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPesqCadClie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesqCadClie.Designer.cs">
+      <DependentUpon>frmPesqCadClie.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTrocaProd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +139,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadFunc.resx">
       <DependentUpon>frmCadFunc.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPedDeCompra.resx">
       <DependentUpon>frmPedDeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesqCadClie.resx">
+      <DependentUpon>frmPesqCadClie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrocaProd.resx">
       <DependentUpon>frmTrocaProd.cs</DependentUpon>

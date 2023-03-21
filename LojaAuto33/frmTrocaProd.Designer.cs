@@ -32,7 +32,6 @@
             this.lblDescProd = new System.Windows.Forms.Label();
             this.lblDataVenda = new System.Windows.Forms.Label();
             this.lblDataTroca = new System.Windows.Forms.Label();
-            this.btnCadTroca = new System.Windows.Forms.Button();
             this.btnDevolocao = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
@@ -81,15 +80,6 @@
             this.lblDataTroca.TabIndex = 3;
             this.lblDataTroca.Text = "Data da Troca";
             // 
-            // btnCadTroca
-            // 
-            this.btnCadTroca.Location = new System.Drawing.Point(12, 316);
-            this.btnCadTroca.Name = "btnCadTroca";
-            this.btnCadTroca.Size = new System.Drawing.Size(110, 26);
-            this.btnCadTroca.TabIndex = 4;
-            this.btnCadTroca.Text = "CADASTRAR";
-            this.btnCadTroca.UseVisualStyleBackColor = true;
-            // 
             // btnDevolocao
             // 
             this.btnDevolocao.Location = new System.Drawing.Point(128, 317);
@@ -98,6 +88,7 @@
             this.btnDevolocao.TabIndex = 5;
             this.btnDevolocao.Text = "DEVOLUÇÃO";
             this.btnDevolocao.UseVisualStyleBackColor = true;
+            this.btnDevolocao.Click += new System.EventHandler(this.btnDevolocao_Click);
             // 
             // btnAlterar
             // 
@@ -116,6 +107,7 @@
             this.btnSair.TabIndex = 7;
             this.btnSair.Text = "SAIR";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnPesq
             // 
@@ -189,7 +181,6 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnDevolocao);
-            this.Controls.Add(this.btnCadTroca);
             this.Controls.Add(this.lblDataTroca);
             this.Controls.Add(this.lblDataVenda);
             this.Controls.Add(this.lblDescProd);
@@ -207,7 +198,6 @@
         private System.Windows.Forms.Label lblDescProd;
         private System.Windows.Forms.Label lblDataVenda;
         private System.Windows.Forms.Label lblDataTroca;
-        private System.Windows.Forms.Button btnCadTroca;
         private System.Windows.Forms.Button btnDevolocao;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnSair;

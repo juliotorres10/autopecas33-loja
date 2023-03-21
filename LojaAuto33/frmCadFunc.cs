@@ -36,5 +36,10 @@ namespace LojaAuto33
             Concat<Control>(Controls.OfType<CheckBox>()).ToList().ForEach(control => control.Text = "");
 
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cadastrado com sucesso!", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
     }
 }

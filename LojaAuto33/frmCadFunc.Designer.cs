@@ -205,6 +205,7 @@
             this.btnCadastrar.TabIndex = 18;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnPesquisar
             // 
@@ -244,7 +245,7 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // fmrCadFunc
+            // frmCadFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -272,8 +273,8 @@
             this.Controls.Add(this.lblRG);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.lblNome);
-            this.Name = "fmrCadFunc";
-            this.Text = "CADSTRO DE FUNCIONÁRIOS";
+            this.Name = "frmCadFunc";
+            this.Text = "CADASTRO DE FUNCIONÁRIOS";
             this.Load += new System.EventHandler(this.fmrCadFunc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -121,6 +121,7 @@
             this.btnCad.TabIndex = 7;
             this.btnCad.Text = "CADASTRAR";
             this.btnCad.UseVisualStyleBackColor = true;
+            this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
             // 
             // btnApagar
             // 

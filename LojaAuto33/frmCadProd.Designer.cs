@@ -116,6 +116,7 @@
             this.btnCadProd.TabIndex = 8;
             this.btnCadProd.Text = "CADASTRAR";
             this.btnCadProd.UseVisualStyleBackColor = true;
+            this.btnCadProd.Click += new System.EventHandler(this.btnCadProd_Click);
             // 
             // btnApagar
             // 
@@ -134,6 +135,7 @@
             this.btnPesquisar.TabIndex = 10;
             this.btnPesquisar.Text = "PESQUISAR ";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnAlterar
             // 
