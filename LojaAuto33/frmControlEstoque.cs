@@ -29,5 +29,12 @@ namespace LojaAuto33
             Controls.OfType<TextBox>().Concat<Control>(Controls.OfType<ComboBox>()).
           Concat<Control>(Controls.OfType<CheckBox>()).ToList().ForEach(control => control.Text = "");
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesqControlEstoq pesqEstoq = new frmPesqControlEstoq();
+            pesqEstoq.Show();
+            this.Close();
+        }
     }
 }

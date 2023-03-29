@@ -82,86 +82,87 @@
             // 
             // btnDevolocao
             // 
-            this.btnDevolocao.Location = new System.Drawing.Point(128, 317);
+            this.btnDevolocao.Location = new System.Drawing.Point(10, 411);
             this.btnDevolocao.Name = "btnDevolocao";
-            this.btnDevolocao.Size = new System.Drawing.Size(109, 25);
-            this.btnDevolocao.TabIndex = 5;
-            this.btnDevolocao.Text = "DEVOLUÇÃO";
+            this.btnDevolocao.Size = new System.Drawing.Size(127, 27);
+            this.btnDevolocao.TabIndex = 4;
+            this.btnDevolocao.Text = "CONFIRMAR TROCA";
             this.btnDevolocao.UseVisualStyleBackColor = true;
             this.btnDevolocao.Click += new System.EventHandler(this.btnDevolocao_Click);
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(12, 348);
+            this.btnAlterar.Location = new System.Drawing.Point(258, 411);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(110, 26);
+            this.btnAlterar.Size = new System.Drawing.Size(110, 28);
             this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "ALTERAR";
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(12, 380);
+            this.btnSair.Location = new System.Drawing.Point(599, 411);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(110, 25);
-            this.btnSair.TabIndex = 7;
+            this.btnSair.Size = new System.Drawing.Size(110, 28);
+            this.btnSair.TabIndex = 9;
             this.btnSair.Text = "SAIR";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnPesq
             // 
-            this.btnPesq.Location = new System.Drawing.Point(128, 349);
+            this.btnPesq.Location = new System.Drawing.Point(143, 411);
             this.btnPesq.Name = "btnPesq";
-            this.btnPesq.Size = new System.Drawing.Size(109, 25);
-            this.btnPesq.TabIndex = 8;
+            this.btnPesq.Size = new System.Drawing.Size(109, 28);
+            this.btnPesq.TabIndex = 5;
             this.btnPesq.Text = "PESQUISAR";
             this.btnPesq.UseVisualStyleBackColor = true;
+            this.btnPesq.Click += new System.EventHandler(this.btnPesq_Click);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(165, 22);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(165, 69);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(168, 20);
-            this.textBox2.TabIndex = 10;
+            this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(165, 121);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(168, 20);
-            this.textBox3.TabIndex = 11;
+            this.textBox3.TabIndex = 2;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(165, 166);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(168, 20);
-            this.textBox4.TabIndex = 12;
+            this.textBox4.TabIndex = 3;
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(128, 381);
+            this.btnVoltar.Location = new System.Drawing.Point(374, 411);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(109, 24);
-            this.btnVoltar.TabIndex = 13;
+            this.btnVoltar.Size = new System.Drawing.Size(109, 28);
+            this.btnVoltar.TabIndex = 7;
             this.btnVoltar.Text = "VOLTAR";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(300, 334);
+            this.btnLimpar.Location = new System.Drawing.Point(488, 411);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 14;
+            this.btnLimpar.Size = new System.Drawing.Size(105, 28);
+            this.btnLimpar.TabIndex = 8;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);

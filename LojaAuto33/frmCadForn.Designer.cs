@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblRazSocial = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.lblCNPJ = new System.Windows.Forms.Label();
-            this.lblInscEstadual = new System.Windows.Forms.Label();
             this.lblEnd = new System.Windows.Forms.Label();
             this.lblFone = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -41,23 +40,19 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
+            this.cadastrodeFornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cadastrodeFornecedoresTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.cadastrodeFornecedoresTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadastrodeFornecedoresBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblRazSocial
-            // 
-            this.lblRazSocial.AutoSize = true;
-            this.lblRazSocial.Location = new System.Drawing.Point(15, 22);
-            this.lblRazSocial.Name = "lblRazSocial";
-            this.lblRazSocial.Size = new System.Drawing.Size(70, 13);
-            this.lblRazSocial.TabIndex = 0;
-            this.lblRazSocial.Text = "Razão Social";
             // 
             // lblCNPJ
             // 
@@ -68,19 +63,10 @@
             this.lblCNPJ.TabIndex = 1;
             this.lblCNPJ.Text = "CNPJ";
             // 
-            // lblInscEstadual
-            // 
-            this.lblInscEstadual.AutoSize = true;
-            this.lblInscEstadual.Location = new System.Drawing.Point(19, 95);
-            this.lblInscEstadual.Name = "lblInscEstadual";
-            this.lblInscEstadual.Size = new System.Drawing.Size(94, 13);
-            this.lblInscEstadual.TabIndex = 2;
-            this.lblInscEstadual.Text = "Inscrição Estadual";
-            // 
             // lblEnd
             // 
             this.lblEnd.AutoSize = true;
-            this.lblEnd.Location = new System.Drawing.Point(20, 131);
+            this.lblEnd.Location = new System.Drawing.Point(20, 86);
             this.lblEnd.Name = "lblEnd";
             this.lblEnd.Size = new System.Drawing.Size(53, 13);
             this.lblEnd.TabIndex = 3;
@@ -89,7 +75,7 @@
             // lblFone
             // 
             this.lblFone.AutoSize = true;
-            this.lblFone.Location = new System.Drawing.Point(20, 165);
+            this.lblFone.Location = new System.Drawing.Point(20, 120);
             this.lblFone.Name = "lblFone";
             this.lblFone.Size = new System.Drawing.Size(31, 13);
             this.lblFone.TabIndex = 4;
@@ -98,7 +84,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(18, 195);
+            this.lblEmail.Location = new System.Drawing.Point(18, 150);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 5;
@@ -107,11 +93,11 @@
             // lblRepresentante
             // 
             this.lblRepresentante.AutoSize = true;
-            this.lblRepresentante.Location = new System.Drawing.Point(19, 234);
+            this.lblRepresentante.Location = new System.Drawing.Point(19, 189);
             this.lblRepresentante.Name = "lblRepresentante";
-            this.lblRepresentante.Size = new System.Drawing.Size(77, 13);
+            this.lblRepresentante.Size = new System.Drawing.Size(108, 13);
             this.lblRepresentante.TabIndex = 6;
-            this.lblRepresentante.Text = "Representante";
+            this.lblRepresentante.Text = "Nome Representante";
             // 
             // btnCad
             // 
@@ -170,67 +156,89 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(120, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 20);
-            this.textBox1.TabIndex = 13;
-            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 53);
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_CNPJ", true));
+            this.textBox2.Location = new System.Drawing.Point(132, 53);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 20);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(120, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 20);
-            this.textBox3.TabIndex = 15;
+            this.textBox2.Size = new System.Drawing.Size(202, 20);
+            this.textBox2.TabIndex = 1;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 121);
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_endereço", true));
+            this.textBox4.Location = new System.Drawing.Point(131, 79);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(203, 20);
-            this.textBox4.TabIndex = 16;
+            this.textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(121, 157);
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_fone", true));
+            this.textBox5.Location = new System.Drawing.Point(132, 113);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(202, 20);
-            this.textBox5.TabIndex = 17;
+            this.textBox5.TabIndex = 4;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(120, 193);
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_email", true));
+            this.textBox6.Location = new System.Drawing.Point(133, 147);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(204, 20);
-            this.textBox6.TabIndex = 18;
+            this.textBox6.Size = new System.Drawing.Size(201, 20);
+            this.textBox6.TabIndex = 5;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(120, 222);
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_Repres", true));
+            this.textBox7.Location = new System.Drawing.Point(133, 182);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(204, 20);
-            this.textBox7.TabIndex = 19;
+            this.textBox7.Size = new System.Drawing.Size(201, 20);
+            this.textBox7.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "CEP";
+            // 
+            // textBox8
+            // 
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_cep", true));
+            this.textBox8.Location = new System.Drawing.Point(133, 214);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(201, 20);
+            this.textBox8.TabIndex = 14;
+            // 
+            // autopeca33DataSet
+            // 
+            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
+            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cadastrodeFornecedoresBindingSource
+            // 
+            this.cadastrodeFornecedoresBindingSource.DataMember = "cadastrodeFornecedores";
+            this.cadastrodeFornecedoresBindingSource.DataSource = this.autopeca33DataSet;
+            // 
+            // cadastrodeFornecedoresTableAdapter
+            // 
+            this.cadastrodeFornecedoresTableAdapter.ClearBeforeFill = true;
             // 
             // frmCadForn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnAlterar);
@@ -241,21 +249,19 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblFone);
             this.Controls.Add(this.lblEnd);
-            this.Controls.Add(this.lblInscEstadual);
             this.Controls.Add(this.lblCNPJ);
-            this.Controls.Add(this.lblRazSocial);
             this.Name = "frmCadForn";
             this.Text = "CADASTRO DE FORNECEDORES";
+            this.Load += new System.EventHandler(this.frmCadForn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadastrodeFornecedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblRazSocial;
         private System.Windows.Forms.Label lblCNPJ;
-        private System.Windows.Forms.Label lblInscEstadual;
         private System.Windows.Forms.Label lblEnd;
         private System.Windows.Forms.Label lblFone;
         private System.Windows.Forms.Label lblEmail;
@@ -266,12 +272,15 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox8;
+        private Autopeca33DataSet autopeca33DataSet;
+        private System.Windows.Forms.BindingSource cadastrodeFornecedoresBindingSource;
+        private Autopeca33DataSetTableAdapters.cadastrodeFornecedoresTableAdapter cadastrodeFornecedoresTableAdapter;
     }
 }

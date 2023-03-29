@@ -19,7 +19,9 @@ namespace LojaAuto33
 
         private void fmrCadFunc_Load(object sender, EventArgs e)
         {
-
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.cadastrofuncionarios'. Você pode movê-la ou removê-la conforme necessário.
+            this.cadastrofuncionariosTableAdapter.Fill(this.autopeca33DataSet.cadastrofuncionarios);
+            cadastrofuncionariosBindingSource.AddNew();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -39,7 +41,23 @@ namespace LojaAuto33
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cadastrado com sucesso!", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            this.Validate();
+            cadastrofuncionariosBindingSource.EndEdit();
+            cadastrofuncionariosTableAdapter.Update(autopeca33DataSet.cadastrofuncionarios);
+            this.cadastrofuncionariosTableAdapter.Fill(this.autopeca33DataSet.cadastrofuncionarios);
+            cadastrofuncionariosBindingSource.MoveLast();
+
+            //chamar um novo registro
+            cadastrofuncionariosBindingSource.AddNew();
+
+            textBox2.Focus();
+
+            //aparece a mensagem quando der certo
+            MessageBox.Show("Pessoa cadastrada com sucesso", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            //limpar tela
+            //    textBox1.Text = "";
+            //  textbox.Text = (" ");
         }
     }
 }

@@ -41,5 +41,10 @@ namespace LojaAuto33
            Controls.OfType<TextBox>().ToList().ForEach(textBox => textBox.Clear());
 
         }
+
+        private void btnPedComprar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,7 +46,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(102, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(480, 161);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 4;
             // 
             // lblNome
             // 
@@ -71,21 +71,21 @@
             this.textBox1.Location = new System.Drawing.Point(155, 33);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(156, 79);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBox2.TabIndex = 1;
             // 
             // btnPesqProd
             // 
             this.btnPesqProd.Location = new System.Drawing.Point(404, 29);
             this.btnPesqProd.Name = "btnPesqProd";
             this.btnPesqProd.Size = new System.Drawing.Size(152, 24);
-            this.btnPesqProd.TabIndex = 5;
+            this.btnPesqProd.TabIndex = 2;
             this.btnPesqProd.Text = "PESQUISAR PRODUTO";
             this.btnPesqProd.UseVisualStyleBackColor = true;
             // 
@@ -94,7 +94,7 @@
             this.btnIDProd.Location = new System.Drawing.Point(404, 75);
             this.btnIDProd.Name = "btnIDProd";
             this.btnIDProd.Size = new System.Drawing.Size(151, 23);
-            this.btnIDProd.TabIndex = 6;
+            this.btnIDProd.TabIndex = 3;
             this.btnIDProd.Text = "CÓDIGO ID";
             this.btnIDProd.UseVisualStyleBackColor = true;
             // 
@@ -103,7 +103,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(204, 398);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(116, 32);
-            this.btnAlterar.TabIndex = 7;
+            this.btnAlterar.TabIndex = 5;
             this.btnAlterar.Text = "ALTERAR";
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
@@ -112,7 +112,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(366, 398);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(115, 32);
-            this.btnVoltar.TabIndex = 8;
+            this.btnVoltar.TabIndex = 6;
             this.btnVoltar.Text = "VOLTAR";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);

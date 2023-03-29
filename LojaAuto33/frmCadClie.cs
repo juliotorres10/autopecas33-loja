@@ -32,7 +32,23 @@ namespace LojaAuto33
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cadastrado com sucesso!", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            this.Validate();
+            cadastrodeclientesBindingSource.EndEdit();
+            cadastrodeclientesTableAdapter.Update(autopeca33DataSet.cadastrodeclientes);
+            this.cadastrodeclientesTableAdapter.Fill(this.autopeca33DataSet.cadastrodeclientes);
+            cadastrodeclientesBindingSource.MoveLast();
+
+            //chamar um novo registro
+            cadastrodeclientesBindingSource.AddNew();
+
+            textBox2.Focus();
+
+            //aparece a mensagem quando der certo
+            MessageBox.Show("Pessoa cadastrada com sucesso", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            //limpar tela
+            //    textBox1.Text = "";
+            //  textbox.Text = (" ");
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -42,6 +58,14 @@ namespace LojaAuto33
             // Abra o formulário de cadastro de clientes
             frmPesqCadClie frmCadClie = new frmPesqCadClie();
             frmCadClie.Show();
+
+        }
+
+        private void frmCadClie_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.cadastrodeclientes'. Você pode movê-la ou removê-la conforme necessário.
+            this.cadastrodeclientesTableAdapter.Fill(this.autopeca33DataSet.cadastrodeclientes);
+            cadastrodeclientesBindingSource.AddNew();
 
         }
     }

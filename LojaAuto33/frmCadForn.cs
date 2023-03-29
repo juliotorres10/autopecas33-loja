@@ -32,7 +32,31 @@ namespace LojaAuto33
 
         private void btnCad_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cadastrado com sucesso!", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            this.Validate();
+            cadastrodeFornecedoresBindingSource.EndEdit();
+            cadastrodeFornecedoresTableAdapter.Update(autopeca33DataSet.cadastrodeFornecedores);
+            this.cadastrodeFornecedoresTableAdapter.Fill(this.autopeca33DataSet.cadastrodeFornecedores);
+            cadastrodeFornecedoresBindingSource.MoveLast();
+
+            //chamar um novo registro
+            cadastrodeFornecedoresBindingSource.AddNew();
+
+            textBox2.Focus();
+
+            //aparece a mensagem quando der certo
+            MessageBox.Show("Pessoa cadastrada com sucesso", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            //limpar tela
+            //    textBox1.Text = "";
+            //  textbox.Text = (" ");
+        }
+
+        private void frmCadForn_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.cadastrodeFornecedores'. Você pode movê-la ou removê-la conforme necessário.
+            this.cadastrodeFornecedoresTableAdapter.Fill(this.autopeca33DataSet.cadastrodeFornecedores);
+            cadastrodeFornecedoresBindingSource.AddNew();
+
         }
     }
 }

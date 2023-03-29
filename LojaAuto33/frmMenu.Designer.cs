@@ -73,28 +73,28 @@
             // fUNCIONÁRIOSToolStripMenuItem
             // 
             this.fUNCIONÁRIOSToolStripMenuItem.Name = "fUNCIONÁRIOSToolStripMenuItem";
-            this.fUNCIONÁRIOSToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.fUNCIONÁRIOSToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fUNCIONÁRIOSToolStripMenuItem.Text = "FUNCIONÁRIOS";
             this.fUNCIONÁRIOSToolStripMenuItem.Click += new System.EventHandler(this.fUNCIONÁRIOSToolStripMenuItem_Click);
             // 
             // cLIENTESToolStripMenuItem
             // 
             this.cLIENTESToolStripMenuItem.Name = "cLIENTESToolStripMenuItem";
-            this.cLIENTESToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.cLIENTESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cLIENTESToolStripMenuItem.Text = "CLIENTES";
             this.cLIENTESToolStripMenuItem.Click += new System.EventHandler(this.cLIENTESToolStripMenuItem_Click);
             // 
             // fORNECEDORESToolStripMenuItem
             // 
             this.fORNECEDORESToolStripMenuItem.Name = "fORNECEDORESToolStripMenuItem";
-            this.fORNECEDORESToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.fORNECEDORESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fORNECEDORESToolStripMenuItem.Text = "FORNECEDORES";
             this.fORNECEDORESToolStripMenuItem.Click += new System.EventHandler(this.fORNECEDORESToolStripMenuItem_Click);
             // 
             // bACKUPToolStripMenuItem
             // 
             this.bACKUPToolStripMenuItem.Name = "bACKUPToolStripMenuItem";
-            this.bACKUPToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.bACKUPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bACKUPToolStripMenuItem.Text = "BACKUP";
             // 
             // pEDIDODECOMPRAToolStripMenuItem

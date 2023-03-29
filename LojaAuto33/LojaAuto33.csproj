@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>kisspng-star-of-david-judaism-symbol-star-of-david-5ae27be297a9a6.3483339115247922906212.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -59,11 +60,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Autopeca33DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Autopeca33DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmPescCadFornec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmPescCadFornec.Designer.cs">
+      <DependentUpon>frmPescCadFornec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesqControlEstoq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesqControlEstoq.Designer.cs">
+      <DependentUpon>frmPesqControlEstoq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesqDeProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesqDeProd.Designer.cs">
+      <DependentUpon>frmPesqDeProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesqCadCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesqCadCompra.Designer.cs">
+      <DependentUpon>frmPesqCadCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCadFunc.cs">
       <SubType>Form</SubType>
@@ -139,8 +163,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmPescCadFornec.resx">
+      <DependentUpon>frmPescCadFornec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesqControlEstoq.resx">
+      <DependentUpon>frmPesqControlEstoq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesqDeProd.resx">
+      <DependentUpon>frmPesqDeProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesqCadCompra.resx">
+      <DependentUpon>frmPesqCadCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadFunc.resx">
       <DependentUpon>frmCadFunc.cs</DependentUpon>
@@ -187,6 +220,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Autopeca33DataSet.xsc">
+      <DependentUpon>Autopeca33DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Autopeca33DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Autopeca33DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Autopeca33DataSet.xss">
+      <DependentUpon>Autopeca33DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -200,9 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="kisspng-star-of-david-judaism-symbol-star-of-david-5ae27be297a9a6.3483339115247922906212.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
