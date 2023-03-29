@@ -35,23 +35,22 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblRepresentante = new System.Windows.Forms.Label();
             this.btnCad = new System.Windows.Forms.Button();
-            this.btnApagar = new System.Windows.Forms.Button();
             this.btnPesq = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cadastrodeFornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
-            this.cadastrodeFornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cadastrodeFornecedoresTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.cadastrodeFornecedoresTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastrodeFornecedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCNPJ
@@ -109,18 +108,9 @@
             this.btnCad.UseVisualStyleBackColor = true;
             this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
             // 
-            // btnApagar
-            // 
-            this.btnApagar.Location = new System.Drawing.Point(136, 405);
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(127, 33);
-            this.btnApagar.TabIndex = 8;
-            this.btnApagar.Text = "APAGAR";
-            this.btnApagar.UseVisualStyleBackColor = true;
-            // 
             // btnPesq
             // 
-            this.btnPesq.Location = new System.Drawing.Point(269, 406);
+            this.btnPesq.Location = new System.Drawing.Point(136, 406);
             this.btnPesq.Name = "btnPesq";
             this.btnPesq.Size = new System.Drawing.Size(120, 32);
             this.btnPesq.TabIndex = 9;
@@ -129,7 +119,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(395, 405);
+            this.btnAlterar.Location = new System.Drawing.Point(262, 406);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(118, 33);
             this.btnAlterar.TabIndex = 10;
@@ -138,7 +128,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(522, 405);
+            this.btnVoltar.Location = new System.Drawing.Point(386, 407);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(124, 32);
             this.btnVoltar.TabIndex = 11;
@@ -148,7 +138,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(652, 404);
+            this.btnLimpar.Location = new System.Drawing.Point(516, 407);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(121, 34);
             this.btnLimpar.TabIndex = 12;
@@ -163,6 +153,16 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(202, 20);
             this.textBox2.TabIndex = 1;
+            // 
+            // cadastrodeFornecedoresBindingSource
+            // 
+            this.cadastrodeFornecedoresBindingSource.DataMember = "cadastrodeFornecedores";
+            this.cadastrodeFornecedoresBindingSource.DataSource = this.autopeca33DataSet;
+            // 
+            // autopeca33DataSet
+            // 
+            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
+            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox4
             // 
@@ -213,16 +213,6 @@
             this.textBox8.Size = new System.Drawing.Size(201, 20);
             this.textBox8.TabIndex = 14;
             // 
-            // autopeca33DataSet
-            // 
-            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
-            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cadastrodeFornecedoresBindingSource
-            // 
-            this.cadastrodeFornecedoresBindingSource.DataMember = "cadastrodeFornecedores";
-            this.cadastrodeFornecedoresBindingSource.DataSource = this.autopeca33DataSet;
-            // 
             // cadastrodeFornecedoresTableAdapter
             // 
             this.cadastrodeFornecedoresTableAdapter.ClearBeforeFill = true;
@@ -243,7 +233,6 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnPesq);
-            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnCad);
             this.Controls.Add(this.lblRepresentante);
             this.Controls.Add(this.lblEmail);
@@ -253,8 +242,8 @@
             this.Name = "frmCadForn";
             this.Text = "CADASTRO DE FORNECEDORES";
             this.Load += new System.EventHandler(this.frmCadForn_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastrodeFornecedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,7 +256,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblRepresentante;
         private System.Windows.Forms.Button btnCad;
-        private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Button btnPesq;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;

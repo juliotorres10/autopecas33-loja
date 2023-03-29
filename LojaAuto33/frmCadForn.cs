@@ -58,5 +58,10 @@ namespace LojaAuto33
             cadastrodeFornecedoresBindingSource.AddNew();
 
         }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
