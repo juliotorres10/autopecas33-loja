@@ -24,8 +24,6 @@ namespace LojaAuto33 {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class Autopeca33DataSet : global::System.Data.DataSet {
         
-        private admLoginDataTable tableadmLogin;
-        
         private cadastrodeclientesDataTable tablecadastrodeclientes;
         
         private cadastrodeFornecedoresDataTable tablecadastrodeFornecedores;
@@ -42,11 +40,11 @@ namespace LojaAuto33 {
         
         private trocaProdDataTable tabletrocaProd;
         
-        private global::System.Data.DataRelation relationFK__controlEs__cadPr__73BA3083;
+        private global::System.Data.DataRelation relationFK__controlEs__cadPr__2A164134;
         
-        private global::System.Data.DataRelation relationFK__controlEs__forn___72C60C4A;
+        private global::System.Data.DataRelation relationFK__controlEs__forn___29221CFB;
         
-        private global::System.Data.DataRelation relationFK__trocaProd__cadPr__4CA06362;
+        private global::System.Data.DataRelation relationFK__trocaProd__contr__2EDAF651;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -76,9 +74,6 @@ namespace LojaAuto33 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["admLogin"] != null)) {
-                    base.Tables.Add(new admLoginDataTable(ds.Tables["admLogin"]));
-                }
                 if ((ds.Tables["cadastrodeclientes"] != null)) {
                     base.Tables.Add(new cadastrodeclientesDataTable(ds.Tables["cadastrodeclientes"]));
                 }
@@ -119,16 +114,6 @@ namespace LojaAuto33 {
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
             base.Tables.CollectionChanged += schemaChangedHandler;
             this.Relations.CollectionChanged += schemaChangedHandler;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public admLoginDataTable admLogin {
-            get {
-                return this.tableadmLogin;
-            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -278,9 +263,6 @@ namespace LojaAuto33 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["admLogin"] != null)) {
-                    base.Tables.Add(new admLoginDataTable(ds.Tables["admLogin"]));
-                }
                 if ((ds.Tables["cadastrodeclientes"] != null)) {
                     base.Tables.Add(new cadastrodeclientesDataTable(ds.Tables["cadastrodeclientes"]));
                 }
@@ -338,12 +320,6 @@ namespace LojaAuto33 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableadmLogin = ((admLoginDataTable)(base.Tables["admLogin"]));
-            if ((initTable == true)) {
-                if ((this.tableadmLogin != null)) {
-                    this.tableadmLogin.InitVars();
-                }
-            }
             this.tablecadastrodeclientes = ((cadastrodeclientesDataTable)(base.Tables["cadastrodeclientes"]));
             if ((initTable == true)) {
                 if ((this.tablecadastrodeclientes != null)) {
@@ -392,9 +368,9 @@ namespace LojaAuto33 {
                     this.tabletrocaProd.InitVars();
                 }
             }
-            this.relationFK__controlEs__cadPr__73BA3083 = this.Relations["FK__controlEs__cadPr__73BA3083"];
-            this.relationFK__controlEs__forn___72C60C4A = this.Relations["FK__controlEs__forn___72C60C4A"];
-            this.relationFK__trocaProd__cadPr__4CA06362 = this.Relations["FK__trocaProd__cadPr__4CA06362"];
+            this.relationFK__controlEs__cadPr__2A164134 = this.Relations["FK__controlEs__cadPr__2A164134"];
+            this.relationFK__controlEs__forn___29221CFB = this.Relations["FK__controlEs__forn___29221CFB"];
+            this.relationFK__trocaProd__contr__2EDAF651 = this.Relations["FK__trocaProd__contr__2EDAF651"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -405,8 +381,6 @@ namespace LojaAuto33 {
             this.Namespace = "http://tempuri.org/Autopeca33DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableadmLogin = new admLoginDataTable();
-            base.Tables.Add(this.tableadmLogin);
             this.tablecadastrodeclientes = new cadastrodeclientesDataTable();
             base.Tables.Add(this.tablecadastrodeclientes);
             this.tablecadastrodeFornecedores = new cadastrodeFornecedoresDataTable();
@@ -423,24 +397,18 @@ namespace LojaAuto33 {
             base.Tables.Add(this.tablepedidosdecompras);
             this.tabletrocaProd = new trocaProdDataTable();
             base.Tables.Add(this.tabletrocaProd);
-            this.relationFK__controlEs__cadPr__73BA3083 = new global::System.Data.DataRelation("FK__controlEs__cadPr__73BA3083", new global::System.Data.DataColumn[] {
+            this.relationFK__controlEs__cadPr__2A164134 = new global::System.Data.DataRelation("FK__controlEs__cadPr__2A164134", new global::System.Data.DataColumn[] {
                         this.tableCadProdutos.cadProd_CDColumn}, new global::System.Data.DataColumn[] {
                         this.tablecontrolEstoque.cadProd_CDColumn}, false);
-            this.Relations.Add(this.relationFK__controlEs__cadPr__73BA3083);
-            this.relationFK__controlEs__forn___72C60C4A = new global::System.Data.DataRelation("FK__controlEs__forn___72C60C4A", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__controlEs__cadPr__2A164134);
+            this.relationFK__controlEs__forn___29221CFB = new global::System.Data.DataRelation("FK__controlEs__forn___29221CFB", new global::System.Data.DataColumn[] {
                         this.tablecadastrodeFornecedores.forn_idColumn}, new global::System.Data.DataColumn[] {
                         this.tablecontrolEstoque.forn_idColumn}, false);
-            this.Relations.Add(this.relationFK__controlEs__forn___72C60C4A);
-            this.relationFK__trocaProd__cadPr__4CA06362 = new global::System.Data.DataRelation("FK__trocaProd__cadPr__4CA06362", new global::System.Data.DataColumn[] {
-                        this.tableCadProdutos.cadProd_CDColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletrocaProd.cadProd_CDColumn}, false);
-            this.Relations.Add(this.relationFK__trocaProd__cadPr__4CA06362);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeadmLogin() {
-            return false;
+            this.Relations.Add(this.relationFK__controlEs__forn___29221CFB);
+            this.relationFK__trocaProd__contr__2EDAF651 = new global::System.Data.DataRelation("FK__trocaProd__contr__2EDAF651", new global::System.Data.DataColumn[] {
+                        this.tablecontrolCaixa.controlCaixa_CDColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletrocaProd.controlCaixa_CDColumn}, false);
+            this.Relations.Add(this.relationFK__trocaProd__contr__2EDAF651);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -547,9 +515,6 @@ namespace LojaAuto33 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void admLoginRowChangeEventHandler(object sender, admLoginRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void cadastrodeclientesRowChangeEventHandler(object sender, cadastrodeclientesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -572,315 +537,6 @@ namespace LojaAuto33 {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void trocaProdRowChangeEventHandler(object sender, trocaProdRowChangeEvent e);
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class admLoginDataTable : global::System.Data.TypedTableBase<admLoginRow> {
-            
-            private global::System.Data.DataColumn columnadmLogin_CD;
-            
-            private global::System.Data.DataColumn columnadmLogin_usuario;
-            
-            private global::System.Data.DataColumn columnadmLogin_senha;
-            
-            private global::System.Data.DataColumn columnadmLogin_cargo;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public admLoginDataTable() {
-                this.TableName = "admLogin";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal admLoginDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected admLoginDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn admLogin_CDColumn {
-                get {
-                    return this.columnadmLogin_CD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn admLogin_usuarioColumn {
-                get {
-                    return this.columnadmLogin_usuario;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn admLogin_senhaColumn {
-                get {
-                    return this.columnadmLogin_senha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn admLogin_cargoColumn {
-                get {
-                    return this.columnadmLogin_cargo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public admLoginRow this[int index] {
-                get {
-                    return ((admLoginRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event admLoginRowChangeEventHandler admLoginRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event admLoginRowChangeEventHandler admLoginRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event admLoginRowChangeEventHandler admLoginRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event admLoginRowChangeEventHandler admLoginRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddadmLoginRow(admLoginRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public admLoginRow AddadmLoginRow(string admLogin_usuario, string admLogin_senha, string admLogin_cargo) {
-                admLoginRow rowadmLoginRow = ((admLoginRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        admLogin_usuario,
-                        admLogin_senha,
-                        admLogin_cargo};
-                rowadmLoginRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowadmLoginRow);
-                return rowadmLoginRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public admLoginRow FindByadmLogin_CD(int admLogin_CD) {
-                return ((admLoginRow)(this.Rows.Find(new object[] {
-                            admLogin_CD})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                admLoginDataTable cln = ((admLoginDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new admLoginDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnadmLogin_CD = base.Columns["admLogin_CD"];
-                this.columnadmLogin_usuario = base.Columns["admLogin_usuario"];
-                this.columnadmLogin_senha = base.Columns["admLogin_senha"];
-                this.columnadmLogin_cargo = base.Columns["admLogin_cargo"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnadmLogin_CD = new global::System.Data.DataColumn("admLogin_CD", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnadmLogin_CD);
-                this.columnadmLogin_usuario = new global::System.Data.DataColumn("admLogin_usuario", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnadmLogin_usuario);
-                this.columnadmLogin_senha = new global::System.Data.DataColumn("admLogin_senha", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnadmLogin_senha);
-                this.columnadmLogin_cargo = new global::System.Data.DataColumn("admLogin_cargo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnadmLogin_cargo);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnadmLogin_CD}, true));
-                this.columnadmLogin_CD.AutoIncrement = true;
-                this.columnadmLogin_CD.AutoIncrementSeed = -1;
-                this.columnadmLogin_CD.AutoIncrementStep = -1;
-                this.columnadmLogin_CD.AllowDBNull = false;
-                this.columnadmLogin_CD.ReadOnly = true;
-                this.columnadmLogin_CD.Unique = true;
-                this.columnadmLogin_usuario.AllowDBNull = false;
-                this.columnadmLogin_usuario.MaxLength = 50;
-                this.columnadmLogin_senha.AllowDBNull = false;
-                this.columnadmLogin_senha.MaxLength = 50;
-                this.columnadmLogin_cargo.MaxLength = 50;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public admLoginRow NewadmLoginRow() {
-                return ((admLoginRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new admLoginRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(admLoginRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.admLoginRowChanged != null)) {
-                    this.admLoginRowChanged(this, new admLoginRowChangeEvent(((admLoginRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.admLoginRowChanging != null)) {
-                    this.admLoginRowChanging(this, new admLoginRowChangeEvent(((admLoginRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.admLoginRowDeleted != null)) {
-                    this.admLoginRowDeleted(this, new admLoginRowChangeEvent(((admLoginRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.admLoginRowDeleting != null)) {
-                    this.admLoginRowDeleting(this, new admLoginRowChangeEvent(((admLoginRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveadmLoginRow(admLoginRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Autopeca33DataSet ds = new Autopeca33DataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "admLoginDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2352,13 +2008,15 @@ namespace LojaAuto33 {
             
             private global::System.Data.DataColumn columncontrolCaixa_CD;
             
-            private global::System.Data.DataColumn columncontrolDescProd;
+            private global::System.Data.DataColumn columncadProd_CD;
             
             private global::System.Data.DataColumn columncontrolCaixa_qtd;
             
-            private global::System.Data.DataColumn columncontrolCaixa_valor;
+            private global::System.Data.DataColumn columncontrolCaixa_valorTotal;
             
             private global::System.Data.DataColumn columncontrolCaixa_formaPgmo;
+            
+            private global::System.Data.DataColumn columncontrolCaixa_datavenda;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2403,9 +2061,9 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn controlDescProdColumn {
+            public global::System.Data.DataColumn cadProd_CDColumn {
                 get {
-                    return this.columncontrolDescProd;
+                    return this.columncadProd_CD;
                 }
             }
             
@@ -2419,9 +2077,9 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn controlCaixa_valorColumn {
+            public global::System.Data.DataColumn controlCaixa_valorTotalColumn {
                 get {
-                    return this.columncontrolCaixa_valor;
+                    return this.columncontrolCaixa_valorTotal;
                 }
             }
             
@@ -2430,6 +2088,14 @@ namespace LojaAuto33 {
             public global::System.Data.DataColumn controlCaixa_formaPgmoColumn {
                 get {
                     return this.columncontrolCaixa_formaPgmo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn controlCaixa_datavendaColumn {
+                get {
+                    return this.columncontrolCaixa_datavenda;
                 }
             }
             
@@ -2470,14 +2136,15 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public controlCaixaRow AddcontrolCaixaRow(string controlDescProd, string controlCaixa_qtd, decimal controlCaixa_valor, string controlCaixa_formaPgmo) {
+            public controlCaixaRow AddcontrolCaixaRow(string cadProd_CD, string controlCaixa_qtd, decimal controlCaixa_valorTotal, string controlCaixa_formaPgmo, System.DateTime controlCaixa_datavenda) {
                 controlCaixaRow rowcontrolCaixaRow = ((controlCaixaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        controlDescProd,
+                        cadProd_CD,
                         controlCaixa_qtd,
-                        controlCaixa_valor,
-                        controlCaixa_formaPgmo};
+                        controlCaixa_valorTotal,
+                        controlCaixa_formaPgmo,
+                        controlCaixa_datavenda};
                 rowcontrolCaixaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcontrolCaixaRow);
                 return rowcontrolCaixaRow;
@@ -2508,10 +2175,11 @@ namespace LojaAuto33 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columncontrolCaixa_CD = base.Columns["controlCaixa_CD"];
-                this.columncontrolDescProd = base.Columns["controlDescProd"];
+                this.columncadProd_CD = base.Columns["cadProd_CD"];
                 this.columncontrolCaixa_qtd = base.Columns["controlCaixa_qtd"];
-                this.columncontrolCaixa_valor = base.Columns["controlCaixa_valor"];
+                this.columncontrolCaixa_valorTotal = base.Columns["controlCaixa_valorTotal"];
                 this.columncontrolCaixa_formaPgmo = base.Columns["controlCaixa_formaPgmo"];
+                this.columncontrolCaixa_datavenda = base.Columns["controlCaixa_datavenda"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2519,14 +2187,16 @@ namespace LojaAuto33 {
             private void InitClass() {
                 this.columncontrolCaixa_CD = new global::System.Data.DataColumn("controlCaixa_CD", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontrolCaixa_CD);
-                this.columncontrolDescProd = new global::System.Data.DataColumn("controlDescProd", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontrolDescProd);
+                this.columncadProd_CD = new global::System.Data.DataColumn("cadProd_CD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncadProd_CD);
                 this.columncontrolCaixa_qtd = new global::System.Data.DataColumn("controlCaixa_qtd", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontrolCaixa_qtd);
-                this.columncontrolCaixa_valor = new global::System.Data.DataColumn("controlCaixa_valor", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontrolCaixa_valor);
+                this.columncontrolCaixa_valorTotal = new global::System.Data.DataColumn("controlCaixa_valorTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontrolCaixa_valorTotal);
                 this.columncontrolCaixa_formaPgmo = new global::System.Data.DataColumn("controlCaixa_formaPgmo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontrolCaixa_formaPgmo);
+                this.columncontrolCaixa_datavenda = new global::System.Data.DataColumn("controlCaixa_datavenda", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontrolCaixa_datavenda);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncontrolCaixa_CD}, true));
                 this.columncontrolCaixa_CD.AutoIncrement = true;
@@ -2535,13 +2205,14 @@ namespace LojaAuto33 {
                 this.columncontrolCaixa_CD.AllowDBNull = false;
                 this.columncontrolCaixa_CD.ReadOnly = true;
                 this.columncontrolCaixa_CD.Unique = true;
-                this.columncontrolDescProd.AllowDBNull = false;
-                this.columncontrolDescProd.MaxLength = 40;
+                this.columncadProd_CD.AllowDBNull = false;
+                this.columncadProd_CD.MaxLength = 40;
                 this.columncontrolCaixa_qtd.AllowDBNull = false;
                 this.columncontrolCaixa_qtd.MaxLength = 50;
-                this.columncontrolCaixa_valor.AllowDBNull = false;
+                this.columncontrolCaixa_valorTotal.AllowDBNull = false;
                 this.columncontrolCaixa_formaPgmo.AllowDBNull = false;
                 this.columncontrolCaixa_formaPgmo.MaxLength = 40;
+                this.columncontrolCaixa_datavenda.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2845,7 +2516,7 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public controlEstoqueRow AddcontrolEstoqueRow(cadastrodeFornecedoresRow parentcadastrodeFornecedoresRowByFK__controlEs__forn___72C60C4A, CadProdutosRow parentCadProdutosRowByFK__controlEs__cadPr__73BA3083, string controlEst_CNPJ, string controlEst_descr, System.DateTime controlEst_dataEnt, System.DateTime controlEst_dataSaida, string controlEst_qtdEnt, string controlEst_qtdSaida, decimal controlEst_valor) {
+            public controlEstoqueRow AddcontrolEstoqueRow(cadastrodeFornecedoresRow parentcadastrodeFornecedoresRowByFK__controlEs__forn___29221CFB, CadProdutosRow parentCadProdutosRowByFK__controlEs__cadPr__2A164134, string controlEst_CNPJ, string controlEst_descr, System.DateTime controlEst_dataEnt, System.DateTime controlEst_dataSaida, string controlEst_qtdEnt, string controlEst_qtdSaida, decimal controlEst_valor) {
                 controlEstoqueRow rowcontrolEstoqueRow = ((controlEstoqueRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2858,11 +2529,11 @@ namespace LojaAuto33 {
                         controlEst_qtdEnt,
                         controlEst_qtdSaida,
                         controlEst_valor};
-                if ((parentcadastrodeFornecedoresRowByFK__controlEs__forn___72C60C4A != null)) {
-                    columnValuesArray[1] = parentcadastrodeFornecedoresRowByFK__controlEs__forn___72C60C4A[0];
+                if ((parentcadastrodeFornecedoresRowByFK__controlEs__forn___29221CFB != null)) {
+                    columnValuesArray[1] = parentcadastrodeFornecedoresRowByFK__controlEs__forn___29221CFB[0];
                 }
-                if ((parentCadProdutosRowByFK__controlEs__cadPr__73BA3083 != null)) {
-                    columnValuesArray[2] = parentCadProdutosRowByFK__controlEs__cadPr__73BA3083[0];
+                if ((parentCadProdutosRowByFK__controlEs__cadPr__2A164134 != null)) {
+                    columnValuesArray[2] = parentCadProdutosRowByFK__controlEs__cadPr__2A164134[0];
                 }
                 rowcontrolEstoqueRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcontrolEstoqueRow);
@@ -3464,11 +3135,11 @@ namespace LojaAuto33 {
             
             private global::System.Data.DataColumn columntrocaProd_CD;
             
-            private global::System.Data.DataColumn columncadProd_CD;
-            
-            private global::System.Data.DataColumn columntrocaProd_dataVenda;
+            private global::System.Data.DataColumn columncontrolCaixa_CD;
             
             private global::System.Data.DataColumn columntrocaProd_dataTroca;
+            
+            private global::System.Data.DataColumn columntrocaProd_qtd;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -3513,17 +3184,9 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn cadProd_CDColumn {
+            public global::System.Data.DataColumn controlCaixa_CDColumn {
                 get {
-                    return this.columncadProd_CD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn trocaProd_dataVendaColumn {
-                get {
-                    return this.columntrocaProd_dataVenda;
+                    return this.columncontrolCaixa_CD;
                 }
             }
             
@@ -3532,6 +3195,14 @@ namespace LojaAuto33 {
             public global::System.Data.DataColumn trocaProd_dataTrocaColumn {
                 get {
                     return this.columntrocaProd_dataTroca;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn trocaProd_qtdColumn {
+                get {
+                    return this.columntrocaProd_qtd;
                 }
             }
             
@@ -3572,15 +3243,15 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public trocaProdRow AddtrocaProdRow(CadProdutosRow parentCadProdutosRowByFK__trocaProd__cadPr__4CA06362, string trocaProd_dataVenda, string trocaProd_dataTroca) {
+            public trocaProdRow AddtrocaProdRow(controlCaixaRow parentcontrolCaixaRowByFK__trocaProd__contr__2EDAF651, System.DateTime trocaProd_dataTroca, string trocaProd_qtd) {
                 trocaProdRow rowtrocaProdRow = ((trocaProdRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        trocaProd_dataVenda,
-                        trocaProd_dataTroca};
-                if ((parentCadProdutosRowByFK__trocaProd__cadPr__4CA06362 != null)) {
-                    columnValuesArray[1] = parentCadProdutosRowByFK__trocaProd__cadPr__4CA06362[0];
+                        trocaProd_dataTroca,
+                        trocaProd_qtd};
+                if ((parentcontrolCaixaRowByFK__trocaProd__contr__2EDAF651 != null)) {
+                    columnValuesArray[1] = parentcontrolCaixaRowByFK__trocaProd__contr__2EDAF651[0];
                 }
                 rowtrocaProdRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtrocaProdRow);
@@ -3612,9 +3283,9 @@ namespace LojaAuto33 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columntrocaProd_CD = base.Columns["trocaProd_CD"];
-                this.columncadProd_CD = base.Columns["cadProd_CD"];
-                this.columntrocaProd_dataVenda = base.Columns["trocaProd_dataVenda"];
+                this.columncontrolCaixa_CD = base.Columns["controlCaixa_CD"];
                 this.columntrocaProd_dataTroca = base.Columns["trocaProd_dataTroca"];
+                this.columntrocaProd_qtd = base.Columns["trocaProd_qtd"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3622,12 +3293,12 @@ namespace LojaAuto33 {
             private void InitClass() {
                 this.columntrocaProd_CD = new global::System.Data.DataColumn("trocaProd_CD", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntrocaProd_CD);
-                this.columncadProd_CD = new global::System.Data.DataColumn("cadProd_CD", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncadProd_CD);
-                this.columntrocaProd_dataVenda = new global::System.Data.DataColumn("trocaProd_dataVenda", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntrocaProd_dataVenda);
-                this.columntrocaProd_dataTroca = new global::System.Data.DataColumn("trocaProd_dataTroca", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncontrolCaixa_CD = new global::System.Data.DataColumn("controlCaixa_CD", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontrolCaixa_CD);
+                this.columntrocaProd_dataTroca = new global::System.Data.DataColumn("trocaProd_dataTroca", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntrocaProd_dataTroca);
+                this.columntrocaProd_qtd = new global::System.Data.DataColumn("trocaProd_qtd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntrocaProd_qtd);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columntrocaProd_CD}, true));
                 this.columntrocaProd_CD.AutoIncrement = true;
@@ -3636,10 +3307,8 @@ namespace LojaAuto33 {
                 this.columntrocaProd_CD.AllowDBNull = false;
                 this.columntrocaProd_CD.ReadOnly = true;
                 this.columntrocaProd_CD.Unique = true;
-                this.columntrocaProd_dataVenda.AllowDBNull = false;
-                this.columntrocaProd_dataVenda.MaxLength = 50;
                 this.columntrocaProd_dataTroca.AllowDBNull = false;
-                this.columntrocaProd_dataTroca.MaxLength = 50;
+                this.columntrocaProd_qtd.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3763,82 +3432,6 @@ namespace LojaAuto33 {
                 }
                 xs.Add(dsSchema);
                 return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class admLoginRow : global::System.Data.DataRow {
-            
-            private admLoginDataTable tableadmLogin;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal admLoginRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableadmLogin = ((admLoginDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int admLogin_CD {
-                get {
-                    return ((int)(this[this.tableadmLogin.admLogin_CDColumn]));
-                }
-                set {
-                    this[this.tableadmLogin.admLogin_CDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string admLogin_usuario {
-                get {
-                    return ((string)(this[this.tableadmLogin.admLogin_usuarioColumn]));
-                }
-                set {
-                    this[this.tableadmLogin.admLogin_usuarioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string admLogin_senha {
-                get {
-                    return ((string)(this[this.tableadmLogin.admLogin_senhaColumn]));
-                }
-                set {
-                    this[this.tableadmLogin.admLogin_senhaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string admLogin_cargo {
-                get {
-                    try {
-                        return ((string)(this[this.tableadmLogin.admLogin_cargoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'admLogin_cargo\' na tabela \'admLogin\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableadmLogin.admLogin_cargoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsadmLogin_cargoNull() {
-                return this.IsNull(this.tableadmLogin.admLogin_cargoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetadmLogin_cargoNull() {
-                this[this.tableadmLogin.admLogin_cargoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4056,11 +3649,11 @@ namespace LojaAuto33 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public controlEstoqueRow[] GetcontrolEstoqueRows() {
-                if ((this.Table.ChildRelations["FK__controlEs__forn___72C60C4A"] == null)) {
+                if ((this.Table.ChildRelations["FK__controlEs__forn___29221CFB"] == null)) {
                     return new controlEstoqueRow[0];
                 }
                 else {
-                    return ((controlEstoqueRow[])(base.GetChildRows(this.Table.ChildRelations["FK__controlEs__forn___72C60C4A"])));
+                    return ((controlEstoqueRow[])(base.GetChildRows(this.Table.ChildRelations["FK__controlEs__forn___29221CFB"])));
                 }
             }
         }
@@ -4262,22 +3855,11 @@ namespace LojaAuto33 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public controlEstoqueRow[] GetcontrolEstoqueRows() {
-                if ((this.Table.ChildRelations["FK__controlEs__cadPr__73BA3083"] == null)) {
+                if ((this.Table.ChildRelations["FK__controlEs__cadPr__2A164134"] == null)) {
                     return new controlEstoqueRow[0];
                 }
                 else {
-                    return ((controlEstoqueRow[])(base.GetChildRows(this.Table.ChildRelations["FK__controlEs__cadPr__73BA3083"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public trocaProdRow[] GettrocaProdRows() {
-                if ((this.Table.ChildRelations["FK__trocaProd__cadPr__4CA06362"] == null)) {
-                    return new trocaProdRow[0];
-                }
-                else {
-                    return ((trocaProdRow[])(base.GetChildRows(this.Table.ChildRelations["FK__trocaProd__cadPr__4CA06362"])));
+                    return ((controlEstoqueRow[])(base.GetChildRows(this.Table.ChildRelations["FK__controlEs__cadPr__2A164134"])));
                 }
             }
         }
@@ -4309,12 +3891,12 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string controlDescProd {
+            public string cadProd_CD {
                 get {
-                    return ((string)(this[this.tablecontrolCaixa.controlDescProdColumn]));
+                    return ((string)(this[this.tablecontrolCaixa.cadProd_CDColumn]));
                 }
                 set {
-                    this[this.tablecontrolCaixa.controlDescProdColumn] = value;
+                    this[this.tablecontrolCaixa.cadProd_CDColumn] = value;
                 }
             }
             
@@ -4331,12 +3913,12 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal controlCaixa_valor {
+            public decimal controlCaixa_valorTotal {
                 get {
-                    return ((decimal)(this[this.tablecontrolCaixa.controlCaixa_valorColumn]));
+                    return ((decimal)(this[this.tablecontrolCaixa.controlCaixa_valorTotalColumn]));
                 }
                 set {
-                    this[this.tablecontrolCaixa.controlCaixa_valorColumn] = value;
+                    this[this.tablecontrolCaixa.controlCaixa_valorTotalColumn] = value;
                 }
             }
             
@@ -4348,6 +3930,28 @@ namespace LojaAuto33 {
                 }
                 set {
                     this[this.tablecontrolCaixa.controlCaixa_formaPgmoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime controlCaixa_datavenda {
+                get {
+                    return ((global::System.DateTime)(this[this.tablecontrolCaixa.controlCaixa_datavendaColumn]));
+                }
+                set {
+                    this[this.tablecontrolCaixa.controlCaixa_datavendaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public trocaProdRow[] GettrocaProdRows() {
+                if ((this.Table.ChildRelations["FK__trocaProd__contr__2EDAF651"] == null)) {
+                    return new trocaProdRow[0];
+                }
+                else {
+                    return ((trocaProdRow[])(base.GetChildRows(this.Table.ChildRelations["FK__trocaProd__contr__2EDAF651"])));
                 }
             }
         }
@@ -4500,10 +4104,10 @@ namespace LojaAuto33 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CadProdutosRow CadProdutosRow {
                 get {
-                    return ((CadProdutosRow)(this.GetParentRow(this.Table.ParentRelations["FK__controlEs__cadPr__73BA3083"])));
+                    return ((CadProdutosRow)(this.GetParentRow(this.Table.ParentRelations["FK__controlEs__cadPr__2A164134"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__controlEs__cadPr__73BA3083"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__controlEs__cadPr__2A164134"]);
                 }
             }
             
@@ -4511,10 +4115,10 @@ namespace LojaAuto33 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public cadastrodeFornecedoresRow cadastrodeFornecedoresRow {
                 get {
-                    return ((cadastrodeFornecedoresRow)(this.GetParentRow(this.Table.ParentRelations["FK__controlEs__forn___72C60C4A"])));
+                    return ((cadastrodeFornecedoresRow)(this.GetParentRow(this.Table.ParentRelations["FK__controlEs__forn___29221CFB"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__controlEs__forn___72C60C4A"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__controlEs__forn___29221CFB"]);
                 }
             }
             
@@ -4760,36 +4364,25 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int cadProd_CD {
+            public int controlCaixa_CD {
                 get {
                     try {
-                        return ((int)(this[this.tabletrocaProd.cadProd_CDColumn]));
+                        return ((int)(this[this.tabletrocaProd.controlCaixa_CDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'cadProd_CD\' na tabela \'trocaProd\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'controlCaixa_CD\' na tabela \'trocaProd\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletrocaProd.cadProd_CDColumn] = value;
+                    this[this.tabletrocaProd.controlCaixa_CDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string trocaProd_dataVenda {
+            public System.DateTime trocaProd_dataTroca {
                 get {
-                    return ((string)(this[this.tabletrocaProd.trocaProd_dataVendaColumn]));
-                }
-                set {
-                    this[this.tabletrocaProd.trocaProd_dataVendaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string trocaProd_dataTroca {
-                get {
-                    return ((string)(this[this.tabletrocaProd.trocaProd_dataTrocaColumn]));
+                    return ((global::System.DateTime)(this[this.tabletrocaProd.trocaProd_dataTrocaColumn]));
                 }
                 set {
                     this[this.tabletrocaProd.trocaProd_dataTrocaColumn] = value;
@@ -4798,59 +4391,53 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CadProdutosRow CadProdutosRow {
+            public string trocaProd_qtd {
                 get {
-                    return ((CadProdutosRow)(this.GetParentRow(this.Table.ParentRelations["FK__trocaProd__cadPr__4CA06362"])));
+                    try {
+                        return ((string)(this[this.tabletrocaProd.trocaProd_qtdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'trocaProd_qtd\' na tabela \'trocaProd\' é DBNull.", e);
+                    }
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__trocaProd__cadPr__4CA06362"]);
+                    this[this.tabletrocaProd.trocaProd_qtdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscadProd_CDNull() {
-                return this.IsNull(this.tabletrocaProd.cadProd_CDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcadProd_CDNull() {
-                this[this.tabletrocaProd.cadProd_CDColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class admLoginRowChangeEvent : global::System.EventArgs {
-            
-            private admLoginRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public admLoginRowChangeEvent(admLoginRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public admLoginRow Row {
+            public controlCaixaRow controlCaixaRow {
                 get {
-                    return this.eventRow;
+                    return ((controlCaixaRow)(this.GetParentRow(this.Table.ParentRelations["FK__trocaProd__contr__2EDAF651"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__trocaProd__contr__2EDAF651"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
+            public bool IscontrolCaixa_CDNull() {
+                return this.IsNull(this.tabletrocaProd.controlCaixa_CDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetcontrolCaixa_CDNull() {
+                this[this.tabletrocaProd.controlCaixa_CDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IstrocaProd_qtdNull() {
+                return this.IsNull(this.tabletrocaProd.trocaProd_qtdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SettrocaProd_qtdNull() {
+                this[this.tabletrocaProd.trocaProd_qtdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5129,387 +4716,6 @@ namespace LojaAuto33 {
 }
 namespace LojaAuto33.Autopeca33DataSetTableAdapters {
     
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class admLoginTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public admLoginTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "admLogin";
-            tableMapping.ColumnMappings.Add("admLogin_CD", "admLogin_CD");
-            tableMapping.ColumnMappings.Add("admLogin_usuario", "admLogin_usuario");
-            tableMapping.ColumnMappings.Add("admLogin_senha", "admLogin_senha");
-            tableMapping.ColumnMappings.Add("admLogin_cargo", "admLogin_cargo");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[admLogin] WHERE (([admLogin_CD] = @Original_admLogin_CD) AND ([admLogin_usuario] = @Original_admLogin_usuario) AND ([admLogin_senha] = @Original_admLogin_senha) AND ((@IsNull_admLogin_cargo = 1 AND [admLogin_cargo] IS NULL) OR ([admLogin_cargo] = @Original_admLogin_cargo)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_admLogin_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_admLogin_usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_admLogin_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_admLogin_cargo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_cargo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_admLogin_cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_cargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [auto33].[admLogin] ([admLogin_usuario], [admLogin_senha], [admLogin_cargo]) VALUES (@admLogin_usuario, @admLogin_senha, @admLogin_cargo);
-SELECT admLogin_CD, admLogin_usuario, admLogin_senha, admLogin_cargo FROM auto33.admLogin WHERE (admLogin_CD = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@admLogin_usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@admLogin_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@admLogin_cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[admLogin] SET [admLogin_usuario] = @admLogin_usuario, [admLogin_senha] = @admLogin_senha, [admLogin_cargo] = @admLogin_cargo WHERE (([admLogin_CD] = @Original_admLogin_CD) AND ([admLogin_usuario] = @Original_admLogin_usuario) AND ([admLogin_senha] = @Original_admLogin_senha) AND ((@IsNull_admLogin_cargo = 1 AND [admLogin_cargo] IS NULL) OR ([admLogin_cargo] = @Original_admLogin_cargo)));
-SELECT admLogin_CD, admLogin_usuario, admLogin_senha, admLogin_cargo FROM auto33.admLogin WHERE (admLogin_CD = @admLogin_CD)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@admLogin_usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@admLogin_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@admLogin_cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_admLogin_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_admLogin_usuario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_usuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_admLogin_senha", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_admLogin_cargo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_cargo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_admLogin_cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_cargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@admLogin_CD", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "admLogin_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LojaAuto33.Properties.Settings.Default.Autopeca33ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT admLogin_CD, admLogin_usuario, admLogin_senha, admLogin_cargo FROM auto33." +
-                "admLogin";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Autopeca33DataSet.admLoginDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Autopeca33DataSet.admLoginDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            Autopeca33DataSet.admLoginDataTable dataTable = new Autopeca33DataSet.admLoginDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Autopeca33DataSet.admLoginDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Autopeca33DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "admLogin");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_admLogin_CD, string Original_admLogin_usuario, string Original_admLogin_senha, string Original_admLogin_cargo) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_admLogin_CD));
-            if ((Original_admLogin_usuario == null)) {
-                throw new global::System.ArgumentNullException("Original_admLogin_usuario");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_admLogin_usuario));
-            }
-            if ((Original_admLogin_senha == null)) {
-                throw new global::System.ArgumentNullException("Original_admLogin_senha");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_admLogin_senha));
-            }
-            if ((Original_admLogin_cargo == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_admLogin_cargo));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string admLogin_usuario, string admLogin_senha, string admLogin_cargo) {
-            if ((admLogin_usuario == null)) {
-                throw new global::System.ArgumentNullException("admLogin_usuario");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(admLogin_usuario));
-            }
-            if ((admLogin_senha == null)) {
-                throw new global::System.ArgumentNullException("admLogin_senha");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(admLogin_senha));
-            }
-            if ((admLogin_cargo == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(admLogin_cargo));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string admLogin_usuario, string admLogin_senha, string admLogin_cargo, int Original_admLogin_CD, string Original_admLogin_usuario, string Original_admLogin_senha, string Original_admLogin_cargo, int admLogin_CD) {
-            if ((admLogin_usuario == null)) {
-                throw new global::System.ArgumentNullException("admLogin_usuario");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(admLogin_usuario));
-            }
-            if ((admLogin_senha == null)) {
-                throw new global::System.ArgumentNullException("admLogin_senha");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(admLogin_senha));
-            }
-            if ((admLogin_cargo == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(admLogin_cargo));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_admLogin_CD));
-            if ((Original_admLogin_usuario == null)) {
-                throw new global::System.ArgumentNullException("Original_admLogin_usuario");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_admLogin_usuario));
-            }
-            if ((Original_admLogin_senha == null)) {
-                throw new global::System.ArgumentNullException("Original_admLogin_senha");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_admLogin_senha));
-            }
-            if ((Original_admLogin_cargo == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_admLogin_cargo));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(admLogin_CD));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string admLogin_usuario, string admLogin_senha, string admLogin_cargo, int Original_admLogin_CD, string Original_admLogin_usuario, string Original_admLogin_senha, string Original_admLogin_cargo) {
-            return this.Update(admLogin_usuario, admLogin_senha, admLogin_cargo, Original_admLogin_CD, Original_admLogin_usuario, Original_admLogin_senha, Original_admLogin_cargo, Original_admLogin_CD);
-        }
-    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -7567,43 +6773,48 @@ SELECT cadProd_CD, cadProd_desc, cadProd_marca, cadProd_valVenda FROM auto33.Cad
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "controlCaixa";
             tableMapping.ColumnMappings.Add("controlCaixa_CD", "controlCaixa_CD");
-            tableMapping.ColumnMappings.Add("controlDescProd", "controlDescProd");
+            tableMapping.ColumnMappings.Add("cadProd_CD", "cadProd_CD");
             tableMapping.ColumnMappings.Add("controlCaixa_qtd", "controlCaixa_qtd");
-            tableMapping.ColumnMappings.Add("controlCaixa_valor", "controlCaixa_valor");
+            tableMapping.ColumnMappings.Add("controlCaixa_valorTotal", "controlCaixa_valorTotal");
             tableMapping.ColumnMappings.Add("controlCaixa_formaPgmo", "controlCaixa_formaPgmo");
+            tableMapping.ColumnMappings.Add("controlCaixa_datavenda", "controlCaixa_datavenda");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[controlCaixa] WHERE (([controlCaixa_CD] = @Original_controlCaixa_CD) AND ([controlDescProd] = @Original_controlDescProd) AND ([controlCaixa_qtd] = @Original_controlCaixa_qtd) AND ([controlCaixa_valor] = @Original_controlCaixa_valor) AND ([controlCaixa_formaPgmo] = @Original_controlCaixa_formaPgmo))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[controlCaixa] WHERE (([controlCaixa_CD] = @Original_controlCaixa_CD) AND ([cadProd_CD] = @Original_cadProd_CD) AND ([controlCaixa_qtd] = @Original_controlCaixa_qtd) AND ([controlCaixa_valorTotal] = @Original_controlCaixa_valorTotal) AND ([controlCaixa_formaPgmo] = @Original_controlCaixa_formaPgmo) AND ([controlCaixa_datavenda] = @Original_controlCaixa_datavenda))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlDescProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlDescProd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_qtd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_valor", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_valorTotal", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valorTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_formaPgmo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_formaPgmo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_datavenda", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_datavenda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [auto33].[controlCaixa] ([controlDescProd], [controlCaixa_qtd], [controlCaixa_valor], [controlCaixa_formaPgmo]) VALUES (@controlDescProd, @controlCaixa_qtd, @controlCaixa_valor, @controlCaixa_formaPgmo);
-SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, controlCaixa_formaPgmo FROM auto33.controlCaixa WHERE (controlCaixa_CD = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [auto33].[controlCaixa] ([cadProd_CD], [controlCaixa_qtd], [controlCaixa_valorTotal], [controlCaixa_formaPgmo], [controlCaixa_datavenda]) VALUES (@cadProd_CD, @controlCaixa_qtd, @controlCaixa_valorTotal, @controlCaixa_formaPgmo, @controlCaixa_datavenda);
+SELECT controlCaixa_CD, cadProd_CD, controlCaixa_qtd, controlCaixa_valorTotal, controlCaixa_formaPgmo, controlCaixa_datavenda FROM auto33.controlCaixa WHERE (controlCaixa_CD = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlDescProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlDescProd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_qtd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_valor", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_valorTotal", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valorTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_formaPgmo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_formaPgmo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_datavenda", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_datavenda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[controlCaixa] SET [controlDescProd] = @controlDescProd, [controlCaixa_qtd] = @controlCaixa_qtd, [controlCaixa_valor] = @controlCaixa_valor, [controlCaixa_formaPgmo] = @controlCaixa_formaPgmo WHERE (([controlCaixa_CD] = @Original_controlCaixa_CD) AND ([controlDescProd] = @Original_controlDescProd) AND ([controlCaixa_qtd] = @Original_controlCaixa_qtd) AND ([controlCaixa_valor] = @Original_controlCaixa_valor) AND ([controlCaixa_formaPgmo] = @Original_controlCaixa_formaPgmo));
-SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, controlCaixa_formaPgmo FROM auto33.controlCaixa WHERE (controlCaixa_CD = @controlCaixa_CD)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[controlCaixa] SET [cadProd_CD] = @cadProd_CD, [controlCaixa_qtd] = @controlCaixa_qtd, [controlCaixa_valorTotal] = @controlCaixa_valorTotal, [controlCaixa_formaPgmo] = @controlCaixa_formaPgmo, [controlCaixa_datavenda] = @controlCaixa_datavenda WHERE (([controlCaixa_CD] = @Original_controlCaixa_CD) AND ([cadProd_CD] = @Original_cadProd_CD) AND ([controlCaixa_qtd] = @Original_controlCaixa_qtd) AND ([controlCaixa_valorTotal] = @Original_controlCaixa_valorTotal) AND ([controlCaixa_formaPgmo] = @Original_controlCaixa_formaPgmo) AND ([controlCaixa_datavenda] = @Original_controlCaixa_datavenda));
+SELECT controlCaixa_CD, cadProd_CD, controlCaixa_qtd, controlCaixa_valorTotal, controlCaixa_formaPgmo, controlCaixa_datavenda FROM auto33.controlCaixa WHERE (controlCaixa_CD = @controlCaixa_CD)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlDescProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlDescProd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_qtd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_valor", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_valorTotal", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valorTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_formaPgmo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_formaPgmo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_datavenda", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_datavenda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlDescProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlDescProd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_qtd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_valor", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_valorTotal", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valorTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_formaPgmo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_formaPgmo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_datavenda", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_datavenda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_CD", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -7620,8 +6831,8 @@ SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, c
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, co" +
-                "ntrolCaixa_formaPgmo FROM auto33.controlCaixa";
+            this._commandCollection[0].CommandText = "SELECT controlCaixa_CD, cadProd_CD, controlCaixa_qtd, controlCaixa_valorTotal, co" +
+                "ntrolCaixa_formaPgmo, controlCaixa_datavenda FROM auto33.controlCaixa";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7682,13 +6893,13 @@ SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_controlCaixa_CD, string Original_controlDescProd, string Original_controlCaixa_qtd, decimal Original_controlCaixa_valor, string Original_controlCaixa_formaPgmo) {
+        public virtual int Delete(int Original_controlCaixa_CD, string Original_cadProd_CD, string Original_controlCaixa_qtd, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_controlCaixa_CD));
-            if ((Original_controlDescProd == null)) {
-                throw new global::System.ArgumentNullException("Original_controlDescProd");
+            if ((Original_cadProd_CD == null)) {
+                throw new global::System.ArgumentNullException("Original_cadProd_CD");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_controlDescProd));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_cadProd_CD));
             }
             if ((Original_controlCaixa_qtd == null)) {
                 throw new global::System.ArgumentNullException("Original_controlCaixa_qtd");
@@ -7696,13 +6907,14 @@ SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, c
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_controlCaixa_qtd));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_controlCaixa_valor));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_controlCaixa_valorTotal));
             if ((Original_controlCaixa_formaPgmo == null)) {
                 throw new global::System.ArgumentNullException("Original_controlCaixa_formaPgmo");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_controlCaixa_formaPgmo));
             }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_controlCaixa_datavenda));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7723,12 +6935,12 @@ SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string controlDescProd, string controlCaixa_qtd, decimal controlCaixa_valor, string controlCaixa_formaPgmo) {
-            if ((controlDescProd == null)) {
-                throw new global::System.ArgumentNullException("controlDescProd");
+        public virtual int Insert(string cadProd_CD, string controlCaixa_qtd, decimal controlCaixa_valorTotal, string controlCaixa_formaPgmo, System.DateTime controlCaixa_datavenda) {
+            if ((cadProd_CD == null)) {
+                throw new global::System.ArgumentNullException("cadProd_CD");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(controlDescProd));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(cadProd_CD));
             }
             if ((controlCaixa_qtd == null)) {
                 throw new global::System.ArgumentNullException("controlCaixa_qtd");
@@ -7736,13 +6948,14 @@ SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, c
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(controlCaixa_qtd));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(controlCaixa_valor));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(controlCaixa_valorTotal));
             if ((controlCaixa_formaPgmo == null)) {
                 throw new global::System.ArgumentNullException("controlCaixa_formaPgmo");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(controlCaixa_formaPgmo));
             }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(controlCaixa_datavenda));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7763,12 +6976,12 @@ SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string controlDescProd, string controlCaixa_qtd, decimal controlCaixa_valor, string controlCaixa_formaPgmo, int Original_controlCaixa_CD, string Original_controlDescProd, string Original_controlCaixa_qtd, decimal Original_controlCaixa_valor, string Original_controlCaixa_formaPgmo, int controlCaixa_CD) {
-            if ((controlDescProd == null)) {
-                throw new global::System.ArgumentNullException("controlDescProd");
+        public virtual int Update(string cadProd_CD, string controlCaixa_qtd, decimal controlCaixa_valorTotal, string controlCaixa_formaPgmo, System.DateTime controlCaixa_datavenda, int Original_controlCaixa_CD, string Original_cadProd_CD, string Original_controlCaixa_qtd, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda, int controlCaixa_CD) {
+            if ((cadProd_CD == null)) {
+                throw new global::System.ArgumentNullException("cadProd_CD");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(controlDescProd));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(cadProd_CD));
             }
             if ((controlCaixa_qtd == null)) {
                 throw new global::System.ArgumentNullException("controlCaixa_qtd");
@@ -7776,34 +6989,36 @@ SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, c
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(controlCaixa_qtd));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(controlCaixa_valor));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(controlCaixa_valorTotal));
             if ((controlCaixa_formaPgmo == null)) {
                 throw new global::System.ArgumentNullException("controlCaixa_formaPgmo");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(controlCaixa_formaPgmo));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_controlCaixa_CD));
-            if ((Original_controlDescProd == null)) {
-                throw new global::System.ArgumentNullException("Original_controlDescProd");
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(controlCaixa_datavenda));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_controlCaixa_CD));
+            if ((Original_cadProd_CD == null)) {
+                throw new global::System.ArgumentNullException("Original_cadProd_CD");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_controlDescProd));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_cadProd_CD));
             }
             if ((Original_controlCaixa_qtd == null)) {
                 throw new global::System.ArgumentNullException("Original_controlCaixa_qtd");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_controlCaixa_qtd));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_controlCaixa_qtd));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_controlCaixa_valor));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_controlCaixa_valorTotal));
             if ((Original_controlCaixa_formaPgmo == null)) {
                 throw new global::System.ArgumentNullException("Original_controlCaixa_formaPgmo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_controlCaixa_formaPgmo));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_controlCaixa_formaPgmo));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(controlCaixa_CD));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_controlCaixa_datavenda));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(controlCaixa_CD));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7824,8 +7039,8 @@ SELECT controlCaixa_CD, controlDescProd, controlCaixa_qtd, controlCaixa_valor, c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string controlDescProd, string controlCaixa_qtd, decimal controlCaixa_valor, string controlCaixa_formaPgmo, int Original_controlCaixa_CD, string Original_controlDescProd, string Original_controlCaixa_qtd, decimal Original_controlCaixa_valor, string Original_controlCaixa_formaPgmo) {
-            return this.Update(controlDescProd, controlCaixa_qtd, controlCaixa_valor, controlCaixa_formaPgmo, Original_controlCaixa_CD, Original_controlDescProd, Original_controlCaixa_qtd, Original_controlCaixa_valor, Original_controlCaixa_formaPgmo, Original_controlCaixa_CD);
+        public virtual int Update(string cadProd_CD, string controlCaixa_qtd, decimal controlCaixa_valorTotal, string controlCaixa_formaPgmo, System.DateTime controlCaixa_datavenda, int Original_controlCaixa_CD, string Original_cadProd_CD, string Original_controlCaixa_qtd, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda) {
+            return this.Update(cadProd_CD, controlCaixa_qtd, controlCaixa_valorTotal, controlCaixa_formaPgmo, controlCaixa_datavenda, Original_controlCaixa_CD, Original_cadProd_CD, Original_controlCaixa_qtd, Original_controlCaixa_valorTotal, Original_controlCaixa_formaPgmo, Original_controlCaixa_datavenda, Original_controlCaixa_CD);
         }
     }
     
@@ -9118,40 +8333,42 @@ SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCom
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "trocaProd";
             tableMapping.ColumnMappings.Add("trocaProd_CD", "trocaProd_CD");
-            tableMapping.ColumnMappings.Add("cadProd_CD", "cadProd_CD");
-            tableMapping.ColumnMappings.Add("trocaProd_dataVenda", "trocaProd_dataVenda");
+            tableMapping.ColumnMappings.Add("controlCaixa_CD", "controlCaixa_CD");
             tableMapping.ColumnMappings.Add("trocaProd_dataTroca", "trocaProd_dataTroca");
+            tableMapping.ColumnMappings.Add("trocaProd_qtd", "trocaProd_qtd");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[trocaProd] WHERE (([trocaProd_CD] = @Original_trocaProd_CD) AND ((@IsNull_cadProd_CD = 1 AND [cadProd_CD] IS NULL) OR ([cadProd_CD] = @Original_cadProd_CD)) AND ([trocaProd_dataVenda] = @Original_trocaProd_dataVenda) AND ([trocaProd_dataTroca] = @Original_trocaProd_dataTroca))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[trocaProd] WHERE (([trocaProd_CD] = @Original_trocaProd_CD) AND ((@IsNull_controlCaixa_CD = 1 AND [controlCaixa_CD] IS NULL) OR ([controlCaixa_CD] = @Original_controlCaixa_CD)) AND ([trocaProd_dataTroca] = @Original_trocaProd_dataTroca) AND ((@IsNull_trocaProd_qtd = 1 AND [trocaProd_qtd] IS NULL) OR ([trocaProd_qtd] = @Original_trocaProd_qtd)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cadProd_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cadProd_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_dataVenda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataVenda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_dataTroca", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataTroca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_dataTroca", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataTroca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_trocaProd_qtd", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_qtd", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_qtd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [auto33].[trocaProd] ([cadProd_CD], [trocaProd_dataVenda], [trocaProd_dataTroca]) VALUES (@cadProd_CD, @trocaProd_dataVenda, @trocaProd_dataTroca);
-SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM auto33.trocaProd WHERE (trocaProd_CD = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [auto33].[trocaProd] ([controlCaixa_CD], [trocaProd_dataTroca], [trocaProd_qtd]) VALUES (@controlCaixa_CD, @trocaProd_dataTroca, @trocaProd_qtd);
+SELECT trocaProd_CD, controlCaixa_CD, trocaProd_dataTroca, trocaProd_qtd FROM auto33.trocaProd WHERE (trocaProd_CD = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_dataVenda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataVenda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_dataTroca", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataTroca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_dataTroca", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataTroca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_qtd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[trocaProd] SET [cadProd_CD] = @cadProd_CD, [trocaProd_dataVenda] = @trocaProd_dataVenda, [trocaProd_dataTroca] = @trocaProd_dataTroca WHERE (([trocaProd_CD] = @Original_trocaProd_CD) AND ((@IsNull_cadProd_CD = 1 AND [cadProd_CD] IS NULL) OR ([cadProd_CD] = @Original_cadProd_CD)) AND ([trocaProd_dataVenda] = @Original_trocaProd_dataVenda) AND ([trocaProd_dataTroca] = @Original_trocaProd_dataTroca));
-SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM auto33.trocaProd WHERE (trocaProd_CD = @trocaProd_CD)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[trocaProd] SET [controlCaixa_CD] = @controlCaixa_CD, [trocaProd_dataTroca] = @trocaProd_dataTroca, [trocaProd_qtd] = @trocaProd_qtd WHERE (([trocaProd_CD] = @Original_trocaProd_CD) AND ((@IsNull_controlCaixa_CD = 1 AND [controlCaixa_CD] IS NULL) OR ([controlCaixa_CD] = @Original_controlCaixa_CD)) AND ([trocaProd_dataTroca] = @Original_trocaProd_dataTroca) AND ((@IsNull_trocaProd_qtd = 1 AND [trocaProd_qtd] IS NULL) OR ([trocaProd_qtd] = @Original_trocaProd_qtd)));
+SELECT trocaProd_CD, controlCaixa_CD, trocaProd_dataTroca, trocaProd_qtd FROM auto33.trocaProd WHERE (trocaProd_CD = @trocaProd_CD)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_dataVenda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataVenda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_dataTroca", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataTroca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_dataTroca", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataTroca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_qtd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cadProd_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cadProd_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_dataVenda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataVenda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_dataTroca", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataTroca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_dataTroca", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_dataTroca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_trocaProd_qtd", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_qtd", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_trocaProd_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_qtd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trocaProd_CD", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "trocaProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -9168,8 +8385,8 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM au" +
-                "to33.trocaProd";
+            this._commandCollection[0].CommandText = "SELECT trocaProd_CD, controlCaixa_CD, trocaProd_dataTroca, trocaProd_qtd FROM aut" +
+                "o33.trocaProd";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9230,27 +8447,24 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_trocaProd_CD, global::System.Nullable<int> Original_cadProd_CD, string Original_trocaProd_dataVenda, string Original_trocaProd_dataTroca) {
+        public virtual int Delete(int Original_trocaProd_CD, global::System.Nullable<int> Original_controlCaixa_CD, System.DateTime Original_trocaProd_dataTroca, string Original_trocaProd_qtd) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_trocaProd_CD));
-            if ((Original_cadProd_CD.HasValue == true)) {
+            if ((Original_controlCaixa_CD.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_cadProd_CD.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_controlCaixa_CD.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_trocaProd_dataVenda == null)) {
-                throw new global::System.ArgumentNullException("Original_trocaProd_dataVenda");
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_trocaProd_dataTroca));
+            if ((Original_trocaProd_qtd == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_trocaProd_dataVenda));
-            }
-            if ((Original_trocaProd_dataTroca == null)) {
-                throw new global::System.ArgumentNullException("Original_trocaProd_dataTroca");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_trocaProd_dataTroca));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_trocaProd_qtd));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9272,24 +8486,19 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> cadProd_CD, string trocaProd_dataVenda, string trocaProd_dataTroca) {
-            if ((cadProd_CD.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(cadProd_CD.Value));
+        public virtual int Insert(global::System.Nullable<int> controlCaixa_CD, System.DateTime trocaProd_dataTroca, string trocaProd_qtd) {
+            if ((controlCaixa_CD.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(controlCaixa_CD.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((trocaProd_dataVenda == null)) {
-                throw new global::System.ArgumentNullException("trocaProd_dataVenda");
+            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(trocaProd_dataTroca));
+            if ((trocaProd_qtd == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(trocaProd_dataVenda));
-            }
-            if ((trocaProd_dataTroca == null)) {
-                throw new global::System.ArgumentNullException("trocaProd_dataTroca");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(trocaProd_dataTroca));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(trocaProd_qtd));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9311,47 +8520,39 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> cadProd_CD, string trocaProd_dataVenda, string trocaProd_dataTroca, int Original_trocaProd_CD, global::System.Nullable<int> Original_cadProd_CD, string Original_trocaProd_dataVenda, string Original_trocaProd_dataTroca, int trocaProd_CD) {
-            if ((cadProd_CD.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(cadProd_CD.Value));
+        public virtual int Update(global::System.Nullable<int> controlCaixa_CD, System.DateTime trocaProd_dataTroca, string trocaProd_qtd, int Original_trocaProd_CD, global::System.Nullable<int> Original_controlCaixa_CD, System.DateTime Original_trocaProd_dataTroca, string Original_trocaProd_qtd, int trocaProd_CD) {
+            if ((controlCaixa_CD.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(controlCaixa_CD.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((trocaProd_dataVenda == null)) {
-                throw new global::System.ArgumentNullException("trocaProd_dataVenda");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(trocaProd_dataTroca));
+            if ((trocaProd_qtd == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(trocaProd_dataVenda));
-            }
-            if ((trocaProd_dataTroca == null)) {
-                throw new global::System.ArgumentNullException("trocaProd_dataTroca");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(trocaProd_dataTroca));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(trocaProd_qtd));
             }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_trocaProd_CD));
-            if ((Original_cadProd_CD.HasValue == true)) {
+            if ((Original_controlCaixa_CD.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_cadProd_CD.Value));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_controlCaixa_CD.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Original_trocaProd_dataVenda == null)) {
-                throw new global::System.ArgumentNullException("Original_trocaProd_dataVenda");
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_trocaProd_dataTroca));
+            if ((Original_trocaProd_qtd == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_trocaProd_dataVenda));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_trocaProd_qtd));
             }
-            if ((Original_trocaProd_dataTroca == null)) {
-                throw new global::System.ArgumentNullException("Original_trocaProd_dataTroca");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_trocaProd_dataTroca));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(trocaProd_CD));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(trocaProd_CD));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9372,8 +8573,8 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> cadProd_CD, string trocaProd_dataVenda, string trocaProd_dataTroca, int Original_trocaProd_CD, global::System.Nullable<int> Original_cadProd_CD, string Original_trocaProd_dataVenda, string Original_trocaProd_dataTroca) {
-            return this.Update(cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca, Original_trocaProd_CD, Original_cadProd_CD, Original_trocaProd_dataVenda, Original_trocaProd_dataTroca, Original_trocaProd_CD);
+        public virtual int Update(global::System.Nullable<int> controlCaixa_CD, System.DateTime trocaProd_dataTroca, string trocaProd_qtd, int Original_trocaProd_CD, global::System.Nullable<int> Original_controlCaixa_CD, System.DateTime Original_trocaProd_dataTroca, string Original_trocaProd_qtd) {
+            return this.Update(controlCaixa_CD, trocaProd_dataTroca, trocaProd_qtd, Original_trocaProd_CD, Original_controlCaixa_CD, Original_trocaProd_dataTroca, Original_trocaProd_qtd, Original_trocaProd_CD);
         }
     }
     
@@ -9388,8 +8589,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
     public partial class TableAdapterManager : global::System.ComponentModel.Component {
         
         private UpdateOrderOption _updateOrder;
-        
-        private admLoginTableAdapter _admLoginTableAdapter;
         
         private cadastrodeclientesTableAdapter _cadastrodeclientesTableAdapter;
         
@@ -9419,20 +8618,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public admLoginTableAdapter admLoginTableAdapter {
-            get {
-                return this._admLoginTableAdapter;
-            }
-            set {
-                this._admLoginTableAdapter = value;
             }
         }
         
@@ -9567,10 +8752,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._admLoginTableAdapter != null) 
-                            && (this._admLoginTableAdapter.Connection != null))) {
-                    return this._admLoginTableAdapter.Connection;
-                }
                 if (((this._cadastrodeclientesTableAdapter != null) 
                             && (this._cadastrodeclientesTableAdapter.Connection != null))) {
                     return this._cadastrodeclientesTableAdapter.Connection;
@@ -9616,9 +8797,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._admLoginTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._cadastrodeclientesTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -9672,12 +8850,12 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._admLoginTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.admLogin.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._controlCaixaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.controlCaixa.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._admLoginTableAdapter.Update(updatedRows));
+                    result = (result + this._controlCaixaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9696,15 +8874,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._cadastrofuncionariosTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._controlCaixaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.controlCaixa.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._controlCaixaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9761,11 +8930,11 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._admLoginTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.admLogin.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._controlCaixaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.controlCaixa.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._admLoginTableAdapter.Update(addedRows));
+                    result = (result + this._controlCaixaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9782,14 +8951,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._cadastrofuncionariosTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._controlCaixaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.controlCaixa.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._controlCaixaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9851,14 +9012,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._controlCaixaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.controlCaixa.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._controlCaixaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._cadastrofuncionariosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.cadastrofuncionarios.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -9875,11 +9028,11 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._admLoginTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.admLogin.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._controlCaixaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.controlCaixa.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._admLoginTableAdapter.Update(deletedRows));
+                    result = (result + this._controlCaixaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9937,11 +9090,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._admLoginTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._admLoginTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
-                        "cadeia de conexão.");
             }
             if (((this._cadastrodeclientesTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._cadastrodeclientesTableAdapter.Connection) == false))) {
@@ -10015,15 +9163,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._admLoginTableAdapter != null)) {
-                    revertConnections.Add(this._admLoginTableAdapter, this._admLoginTableAdapter.Connection);
-                    this._admLoginTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._admLoginTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._admLoginTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._admLoginTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._admLoginTableAdapter.Adapter);
-                    }
-                }
                 if ((this._cadastrodeclientesTableAdapter != null)) {
                     revertConnections.Add(this._cadastrodeclientesTableAdapter, this._cadastrodeclientesTableAdapter.Connection);
                     this._cadastrodeclientesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -10153,10 +9292,6 @@ SELECT trocaProd_CD, cadProd_CD, trocaProd_dataVenda, trocaProd_dataTroca FROM a
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._admLoginTableAdapter != null)) {
-                    this._admLoginTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._admLoginTableAdapter]));
-                    this._admLoginTableAdapter.Transaction = null;
                 }
                 if ((this._cadastrodeclientesTableAdapter != null)) {
                     this._cadastrodeclientesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cadastrodeclientesTableAdapter]));

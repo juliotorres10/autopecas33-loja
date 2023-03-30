@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblID = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -37,7 +38,23 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
+            this.controlEstoqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlEstoqueTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.controlEstoqueTableAdapter();
+            this.controlEstCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fornidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cadProdCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlEstCNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlEstdescrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlEstdataEntDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlEstdataSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlEstqtdEntDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlEstqtdSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.controlEstvalorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlEstoqueBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -110,17 +127,116 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.controlEstCDDataGridViewTextBoxColumn,
+            this.fornidDataGridViewTextBoxColumn,
+            this.cadProdCDDataGridViewTextBoxColumn,
+            this.controlEstCNPJDataGridViewTextBoxColumn,
+            this.controlEstdescrDataGridViewTextBoxColumn,
+            this.controlEstdataEntDataGridViewTextBoxColumn,
+            this.controlEstdataSaidaDataGridViewTextBoxColumn,
+            this.controlEstqtdEntDataGridViewTextBoxColumn,
+            this.controlEstqtdSaidaDataGridViewTextBoxColumn,
+            this.controlEstvalorDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.controlEstoqueBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(119, 180);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(595, 188);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // autopeca33DataSet
+            // 
+            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
+            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // controlEstoqueBindingSource
+            // 
+            this.controlEstoqueBindingSource.DataMember = "controlEstoque";
+            this.controlEstoqueBindingSource.DataSource = this.autopeca33DataSet;
+            // 
+            // controlEstoqueTableAdapter
+            // 
+            this.controlEstoqueTableAdapter.ClearBeforeFill = true;
+            // 
+            // controlEstCDDataGridViewTextBoxColumn
+            // 
+            this.controlEstCDDataGridViewTextBoxColumn.DataPropertyName = "controlEst_CD";
+            this.controlEstCDDataGridViewTextBoxColumn.HeaderText = "controlEst_CD";
+            this.controlEstCDDataGridViewTextBoxColumn.Name = "controlEstCDDataGridViewTextBoxColumn";
+            this.controlEstCDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fornidDataGridViewTextBoxColumn
+            // 
+            this.fornidDataGridViewTextBoxColumn.DataPropertyName = "forn_id";
+            this.fornidDataGridViewTextBoxColumn.HeaderText = "forn_id";
+            this.fornidDataGridViewTextBoxColumn.Name = "fornidDataGridViewTextBoxColumn";
+            // 
+            // cadProdCDDataGridViewTextBoxColumn
+            // 
+            this.cadProdCDDataGridViewTextBoxColumn.DataPropertyName = "cadProd_CD";
+            this.cadProdCDDataGridViewTextBoxColumn.HeaderText = "cadProd_CD";
+            this.cadProdCDDataGridViewTextBoxColumn.Name = "cadProdCDDataGridViewTextBoxColumn";
+            // 
+            // controlEstCNPJDataGridViewTextBoxColumn
+            // 
+            this.controlEstCNPJDataGridViewTextBoxColumn.DataPropertyName = "controlEst_CNPJ";
+            this.controlEstCNPJDataGridViewTextBoxColumn.HeaderText = "controlEst_CNPJ";
+            this.controlEstCNPJDataGridViewTextBoxColumn.Name = "controlEstCNPJDataGridViewTextBoxColumn";
+            // 
+            // controlEstdescrDataGridViewTextBoxColumn
+            // 
+            this.controlEstdescrDataGridViewTextBoxColumn.DataPropertyName = "controlEst_descr";
+            this.controlEstdescrDataGridViewTextBoxColumn.HeaderText = "controlEst_descr";
+            this.controlEstdescrDataGridViewTextBoxColumn.Name = "controlEstdescrDataGridViewTextBoxColumn";
+            // 
+            // controlEstdataEntDataGridViewTextBoxColumn
+            // 
+            this.controlEstdataEntDataGridViewTextBoxColumn.DataPropertyName = "controlEst_dataEnt";
+            this.controlEstdataEntDataGridViewTextBoxColumn.HeaderText = "controlEst_dataEnt";
+            this.controlEstdataEntDataGridViewTextBoxColumn.Name = "controlEstdataEntDataGridViewTextBoxColumn";
+            // 
+            // controlEstdataSaidaDataGridViewTextBoxColumn
+            // 
+            this.controlEstdataSaidaDataGridViewTextBoxColumn.DataPropertyName = "controlEst_dataSaida";
+            this.controlEstdataSaidaDataGridViewTextBoxColumn.HeaderText = "controlEst_dataSaida";
+            this.controlEstdataSaidaDataGridViewTextBoxColumn.Name = "controlEstdataSaidaDataGridViewTextBoxColumn";
+            // 
+            // controlEstqtdEntDataGridViewTextBoxColumn
+            // 
+            this.controlEstqtdEntDataGridViewTextBoxColumn.DataPropertyName = "controlEst_qtdEnt";
+            this.controlEstqtdEntDataGridViewTextBoxColumn.HeaderText = "controlEst_qtdEnt";
+            this.controlEstqtdEntDataGridViewTextBoxColumn.Name = "controlEstqtdEntDataGridViewTextBoxColumn";
+            // 
+            // controlEstqtdSaidaDataGridViewTextBoxColumn
+            // 
+            this.controlEstqtdSaidaDataGridViewTextBoxColumn.DataPropertyName = "controlEst_qtdSaida";
+            this.controlEstqtdSaidaDataGridViewTextBoxColumn.HeaderText = "controlEst_qtdSaida";
+            this.controlEstqtdSaidaDataGridViewTextBoxColumn.Name = "controlEstqtdSaidaDataGridViewTextBoxColumn";
+            // 
+            // controlEstvalorDataGridViewTextBoxColumn
+            // 
+            this.controlEstvalorDataGridViewTextBoxColumn.DataPropertyName = "controlEst_valor";
+            this.controlEstvalorDataGridViewTextBoxColumn.HeaderText = "controlEst_valor";
+            this.controlEstvalorDataGridViewTextBoxColumn.Name = "controlEstvalorDataGridViewTextBoxColumn";
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Location = new System.Drawing.Point(383, 408);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(134, 30);
+            this.btnDeletar.TabIndex = 18;
+            this.btnDeletar.Text = "DELETAR";
+            this.btnDeletar.UseVisualStyleBackColor = true;
             // 
             // frmPesqControlEstoq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnVoltar);
@@ -132,7 +248,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmPesqControlEstoq";
             this.Text = "PESQUISA CONTROLE DE ESTOQUE";
+            this.Load += new System.EventHandler(this.frmPesqControlEstoq_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlEstoqueBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +268,19 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Autopeca33DataSet autopeca33DataSet;
+        private System.Windows.Forms.BindingSource controlEstoqueBindingSource;
+        private Autopeca33DataSetTableAdapters.controlEstoqueTableAdapter controlEstoqueTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlEstCDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fornidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cadProdCDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlEstCNPJDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlEstdescrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlEstdataEntDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlEstdataSaidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlEstqtdEntDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlEstqtdSaidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn controlEstvalorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnDeletar;
     }
 }

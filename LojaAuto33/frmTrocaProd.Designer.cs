@@ -28,48 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblDescProd = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.lblCodProd = new System.Windows.Forms.Label();
             this.lblDataVenda = new System.Windows.Forms.Label();
             this.lblDataTroca = new System.Windows.Forms.Label();
             this.btnDevolocao = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnPesq = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.trocaProdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.trocaProdTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.trocaProdTableAdapter();
+            this.lblQtd = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.trocaProdBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblCodProd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Código do Produto";
-            // 
-            // lblDescProd
-            // 
-            this.lblDescProd.AutoSize = true;
-            this.lblDescProd.Location = new System.Drawing.Point(27, 76);
-            this.lblDescProd.Name = "lblDescProd";
-            this.lblDescProd.Size = new System.Drawing.Size(110, 13);
-            this.lblDescProd.TabIndex = 1;
-            this.lblDescProd.Text = "Descrição do Produto";
+            this.lblCodProd.AutoSize = true;
+            this.lblCodProd.Location = new System.Drawing.Point(27, 76);
+            this.lblCodProd.Name = "lblCodProd";
+            this.lblCodProd.Size = new System.Drawing.Size(95, 13);
+            this.lblCodProd.TabIndex = 1;
+            this.lblCodProd.Text = "Código do Produto";
             // 
             // lblDataVenda
             // 
             this.lblDataVenda.AutoSize = true;
             this.lblDataVenda.Location = new System.Drawing.Point(27, 128);
             this.lblDataVenda.Name = "lblDataVenda";
-            this.lblDataVenda.Size = new System.Drawing.Size(79, 13);
+            this.lblDataVenda.Size = new System.Drawing.Size(69, 13);
             this.lblDataVenda.TabIndex = 2;
-            this.lblDataVenda.Text = "Data da Venda";
+            this.lblDataVenda.Text = "Código Caixa";
             // 
             // lblDataTroca
             // 
@@ -119,22 +116,27 @@
             this.btnPesq.UseVisualStyleBackColor = true;
             this.btnPesq.Click += new System.EventHandler(this.btnPesq_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(165, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 0;
-            // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.trocaProdBindingSource, "cadProd_CD", true));
             this.textBox2.Location = new System.Drawing.Point(165, 69);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(168, 20);
             this.textBox2.TabIndex = 1;
             // 
+            // trocaProdBindingSource
+            // 
+            this.trocaProdBindingSource.DataMember = "trocaProd";
+            this.trocaProdBindingSource.DataSource = this.autopeca33DataSet;
+            // 
+            // autopeca33DataSet
+            // 
+            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
+            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.trocaProdBindingSource, "controlCaixa_CD", true));
             this.textBox3.Location = new System.Drawing.Point(165, 121);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(168, 20);
@@ -142,6 +144,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.trocaProdBindingSource, "trocaProd_dataTroca", true));
             this.textBox4.Location = new System.Drawing.Point(165, 166);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(168, 20);
@@ -167,47 +170,73 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // trocaProdTableAdapter
+            // 
+            this.trocaProdTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblQtd
+            // 
+            this.lblQtd.AutoSize = true;
+            this.lblQtd.Location = new System.Drawing.Point(27, 220);
+            this.lblQtd.Name = "lblQtd";
+            this.lblQtd.Size = new System.Drawing.Size(65, 13);
+            this.lblQtd.TabIndex = 10;
+            this.lblQtd.Text = "Quantidade ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.trocaProdBindingSource, "trocaProd_Quantidade", true));
+            this.textBox1.Location = new System.Drawing.Point(164, 213);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 20);
+            this.textBox1.TabIndex = 11;
+            // 
             // frmTrocaProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblQtd);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnPesq);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnDevolocao);
             this.Controls.Add(this.lblDataTroca);
             this.Controls.Add(this.lblDataVenda);
-            this.Controls.Add(this.lblDescProd);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCodProd);
             this.Name = "frmTrocaProd";
             this.Text = "TROCA DE PRODUTO";
+            this.Load += new System.EventHandler(this.frmTrocaProd_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.trocaProdBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblDescProd;
+        private System.Windows.Forms.Label lblCodProd;
         private System.Windows.Forms.Label lblDataVenda;
         private System.Windows.Forms.Label lblDataTroca;
         private System.Windows.Forms.Button btnDevolocao;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnPesq;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnLimpar;
+        private Autopeca33DataSet autopeca33DataSet;
+        private System.Windows.Forms.BindingSource trocaProdBindingSource;
+        private Autopeca33DataSetTableAdapters.trocaProdTableAdapter trocaProdTableAdapter;
+        private System.Windows.Forms.Label lblQtd;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

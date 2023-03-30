@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblID = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -37,7 +38,22 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
+            this.pedidosdecomprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pedidosdecomprasTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.pedidosdecomprasTableAdapter();
+            this.pedCompraCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fornidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cadProdCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedCompraCNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedCompradescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedCompraqtdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedCompradataDeEntrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedCompradataDeSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedCompradataDevolucaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidosdecomprasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -60,7 +76,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(451, 407);
+            this.btnVoltar.Location = new System.Drawing.Point(251, 395);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(126, 31);
             this.btnVoltar.TabIndex = 6;
@@ -69,7 +85,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(310, 408);
+            this.btnAlterar.Location = new System.Drawing.Point(119, 396);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(126, 30);
             this.btnAlterar.TabIndex = 5;
@@ -110,17 +126,109 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pedCompraCDDataGridViewTextBoxColumn,
+            this.fornidDataGridViewTextBoxColumn,
+            this.cadProdCDDataGridViewTextBoxColumn,
+            this.pedCompraCNPJDataGridViewTextBoxColumn,
+            this.pedCompradescDataGridViewTextBoxColumn,
+            this.pedCompraqtdDataGridViewTextBoxColumn,
+            this.pedCompradataDeEntrDataGridViewTextBoxColumn,
+            this.pedCompradataDeSaidaDataGridViewTextBoxColumn,
+            this.pedCompradataDevolucaoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.pedidosdecomprasBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(119, 180);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(595, 188);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(383, 395);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 30);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "DELETAR";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // autopeca33DataSet
+            // 
+            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
+            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pedidosdecomprasBindingSource
+            // 
+            this.pedidosdecomprasBindingSource.DataMember = "pedidosdecompras";
+            this.pedidosdecomprasBindingSource.DataSource = this.autopeca33DataSet;
+            // 
+            // pedidosdecomprasTableAdapter
+            // 
+            this.pedidosdecomprasTableAdapter.ClearBeforeFill = true;
+            // 
+            // pedCompraCDDataGridViewTextBoxColumn
+            // 
+            this.pedCompraCDDataGridViewTextBoxColumn.DataPropertyName = "pedCompra_CD";
+            this.pedCompraCDDataGridViewTextBoxColumn.HeaderText = "pedCompra_CD";
+            this.pedCompraCDDataGridViewTextBoxColumn.Name = "pedCompraCDDataGridViewTextBoxColumn";
+            this.pedCompraCDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fornidDataGridViewTextBoxColumn
+            // 
+            this.fornidDataGridViewTextBoxColumn.DataPropertyName = "forn_id";
+            this.fornidDataGridViewTextBoxColumn.HeaderText = "forn_id";
+            this.fornidDataGridViewTextBoxColumn.Name = "fornidDataGridViewTextBoxColumn";
+            // 
+            // cadProdCDDataGridViewTextBoxColumn
+            // 
+            this.cadProdCDDataGridViewTextBoxColumn.DataPropertyName = "cadProd_CD";
+            this.cadProdCDDataGridViewTextBoxColumn.HeaderText = "cadProd_CD";
+            this.cadProdCDDataGridViewTextBoxColumn.Name = "cadProdCDDataGridViewTextBoxColumn";
+            // 
+            // pedCompraCNPJDataGridViewTextBoxColumn
+            // 
+            this.pedCompraCNPJDataGridViewTextBoxColumn.DataPropertyName = "pedCompra_CNPJ";
+            this.pedCompraCNPJDataGridViewTextBoxColumn.HeaderText = "pedCompra_CNPJ";
+            this.pedCompraCNPJDataGridViewTextBoxColumn.Name = "pedCompraCNPJDataGridViewTextBoxColumn";
+            // 
+            // pedCompradescDataGridViewTextBoxColumn
+            // 
+            this.pedCompradescDataGridViewTextBoxColumn.DataPropertyName = "pedCompra_desc";
+            this.pedCompradescDataGridViewTextBoxColumn.HeaderText = "pedCompra_desc";
+            this.pedCompradescDataGridViewTextBoxColumn.Name = "pedCompradescDataGridViewTextBoxColumn";
+            // 
+            // pedCompraqtdDataGridViewTextBoxColumn
+            // 
+            this.pedCompraqtdDataGridViewTextBoxColumn.DataPropertyName = "pedCompra_qtd";
+            this.pedCompraqtdDataGridViewTextBoxColumn.HeaderText = "pedCompra_qtd";
+            this.pedCompraqtdDataGridViewTextBoxColumn.Name = "pedCompraqtdDataGridViewTextBoxColumn";
+            // 
+            // pedCompradataDeEntrDataGridViewTextBoxColumn
+            // 
+            this.pedCompradataDeEntrDataGridViewTextBoxColumn.DataPropertyName = "pedCompra_dataDeEntr";
+            this.pedCompradataDeEntrDataGridViewTextBoxColumn.HeaderText = "pedCompra_dataDeEntr";
+            this.pedCompradataDeEntrDataGridViewTextBoxColumn.Name = "pedCompradataDeEntrDataGridViewTextBoxColumn";
+            // 
+            // pedCompradataDeSaidaDataGridViewTextBoxColumn
+            // 
+            this.pedCompradataDeSaidaDataGridViewTextBoxColumn.DataPropertyName = "pedCompra_dataDeSaida";
+            this.pedCompradataDeSaidaDataGridViewTextBoxColumn.HeaderText = "pedCompra_dataDeSaida";
+            this.pedCompradataDeSaidaDataGridViewTextBoxColumn.Name = "pedCompradataDeSaidaDataGridViewTextBoxColumn";
+            // 
+            // pedCompradataDevolucaoDataGridViewTextBoxColumn
+            // 
+            this.pedCompradataDevolucaoDataGridViewTextBoxColumn.DataPropertyName = "pedCompra_dataDevolucao";
+            this.pedCompradataDevolucaoDataGridViewTextBoxColumn.HeaderText = "pedCompra_dataDevolucao";
+            this.pedCompradataDevolucaoDataGridViewTextBoxColumn.Name = "pedCompradataDevolucaoDataGridViewTextBoxColumn";
             // 
             // frmPesqCadCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnVoltar);
@@ -132,7 +240,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmPesqCadCompra";
             this.Text = "PESQUISA CADASTRO DE COMPRA";
+            this.Load += new System.EventHandler(this.frmPesqCadCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidosdecomprasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +260,18 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private Autopeca33DataSet autopeca33DataSet;
+        private System.Windows.Forms.BindingSource pedidosdecomprasBindingSource;
+        private Autopeca33DataSetTableAdapters.pedidosdecomprasTableAdapter pedidosdecomprasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pedCompraCDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fornidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cadProdCDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pedCompraCNPJDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pedCompradescDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pedCompraqtdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pedCompradataDeEntrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pedCompradataDeSaidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pedCompradataDevolucaoDataGridViewTextBoxColumn;
     }
 }

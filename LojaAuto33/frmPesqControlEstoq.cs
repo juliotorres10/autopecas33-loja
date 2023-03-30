@@ -16,5 +16,12 @@ namespace LojaAuto33
         {
             InitializeComponent();
         }
+
+        private void frmPesqControlEstoq_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.controlEstoque'. Você pode movê-la ou removê-la conforme necessário.
+            this.controlEstoqueTableAdapter.Fill(this.autopeca33DataSet.controlEstoque);
+
+        }
     }
 }

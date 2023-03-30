@@ -23,5 +23,12 @@ namespace LojaAuto33
             CadProd.Show();
             this.Close();
         }
+
+        private void frmPesqProd_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.CadProdutos'. Você pode movê-la ou removê-la conforme necessário.
+            this.cadProdutosTableAdapter.Fill(this.autopeca33DataSet.CadProdutos);
+
+        }
     }
 }

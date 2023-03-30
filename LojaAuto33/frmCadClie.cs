@@ -53,7 +53,7 @@ namespace LojaAuto33
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           
 
             // Abra o formulário de cadastro de clientes
             frmPesqCadClie frmCadClie = new frmPesqCadClie();

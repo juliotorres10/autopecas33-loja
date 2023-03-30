@@ -56,7 +56,7 @@
             // lblCNPJ
             // 
             this.lblCNPJ.AutoSize = true;
-            this.lblCNPJ.Location = new System.Drawing.Point(18, 56);
+            this.lblCNPJ.Location = new System.Drawing.Point(18, 44);
             this.lblCNPJ.Name = "lblCNPJ";
             this.lblCNPJ.Size = new System.Drawing.Size(34, 13);
             this.lblCNPJ.TabIndex = 1;
@@ -65,7 +65,7 @@
             // lblEnd
             // 
             this.lblEnd.AutoSize = true;
-            this.lblEnd.Location = new System.Drawing.Point(20, 86);
+            this.lblEnd.Location = new System.Drawing.Point(18, 79);
             this.lblEnd.Name = "lblEnd";
             this.lblEnd.Size = new System.Drawing.Size(53, 13);
             this.lblEnd.TabIndex = 3;
@@ -74,7 +74,7 @@
             // lblFone
             // 
             this.lblFone.AutoSize = true;
-            this.lblFone.Location = new System.Drawing.Point(20, 120);
+            this.lblFone.Location = new System.Drawing.Point(17, 117);
             this.lblFone.Name = "lblFone";
             this.lblFone.Size = new System.Drawing.Size(31, 13);
             this.lblFone.TabIndex = 4;
@@ -83,7 +83,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(18, 150);
+            this.lblEmail.Location = new System.Drawing.Point(16, 150);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 5;
@@ -92,7 +92,7 @@
             // lblRepresentante
             // 
             this.lblRepresentante.AutoSize = true;
-            this.lblRepresentante.Location = new System.Drawing.Point(19, 189);
+            this.lblRepresentante.Location = new System.Drawing.Point(17, 185);
             this.lblRepresentante.Name = "lblRepresentante";
             this.lblRepresentante.Size = new System.Drawing.Size(108, 13);
             this.lblRepresentante.TabIndex = 6;
@@ -149,9 +149,9 @@
             // textBox2
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_CNPJ", true));
-            this.textBox2.Location = new System.Drawing.Point(132, 53);
+            this.textBox2.Location = new System.Drawing.Point(132, 37);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 20);
+            this.textBox2.Size = new System.Drawing.Size(201, 20);
             this.textBox2.TabIndex = 1;
             // 
             // cadastrodeFornecedoresBindingSource
@@ -167,25 +167,25 @@
             // textBox4
             // 
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_endereço", true));
-            this.textBox4.Location = new System.Drawing.Point(131, 79);
+            this.textBox4.Location = new System.Drawing.Point(132, 76);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 20);
+            this.textBox4.Size = new System.Drawing.Size(201, 20);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_fone", true));
-            this.textBox5.Location = new System.Drawing.Point(132, 113);
+            this.textBox5.Location = new System.Drawing.Point(132, 110);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(202, 20);
+            this.textBox5.Size = new System.Drawing.Size(201, 20);
             this.textBox5.TabIndex = 4;
             // 
             // textBox6
             // 
             this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_email", true));
-            this.textBox6.Location = new System.Drawing.Point(133, 147);
+            this.textBox6.Location = new System.Drawing.Point(133, 143);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(201, 20);
+            this.textBox6.Size = new System.Drawing.Size(200, 20);
             this.textBox6.TabIndex = 5;
             // 
             // textBox7
@@ -193,13 +193,13 @@
             this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_Repres", true));
             this.textBox7.Location = new System.Drawing.Point(133, 182);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(201, 20);
+            this.textBox7.Size = new System.Drawing.Size(200, 20);
             this.textBox7.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 221);
+            this.label1.Location = new System.Drawing.Point(16, 221);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 13;
@@ -210,7 +210,7 @@
             this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_cep", true));
             this.textBox8.Location = new System.Drawing.Point(133, 214);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(201, 20);
+            this.textBox8.Size = new System.Drawing.Size(200, 20);
             this.textBox8.TabIndex = 14;
             // 
             // cadastrodeFornecedoresTableAdapter

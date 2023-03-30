@@ -44,5 +44,12 @@ namespace LojaAuto33
         {
           
         }
+
+        private void frmTrocaProd_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.trocaProd'. Você pode movê-la ou removê-la conforme necessário.
+            this.trocaProdTableAdapter.Fill(this.autopeca33DataSet.trocaProd);
+
+        }
     }
 }

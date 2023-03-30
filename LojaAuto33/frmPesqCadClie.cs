@@ -26,5 +26,12 @@ namespace LojaAuto33
             frmCadClie frmCadClie = new frmCadClie();
             frmCadClie.Show();
         }
+
+        private void frmPesqCadClie_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.cadastrodeclientes'. Você pode movê-la ou removê-la conforme necessário.
+            this.cadastrodeclientesTableAdapter.Fill(this.autopeca33DataSet.cadastrodeclientes);
+
+        }
     }
 }

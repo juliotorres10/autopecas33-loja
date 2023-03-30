@@ -34,6 +34,8 @@ namespace LojaAuto33
 
         private void frmControlCaixa_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet1.CadProdutos'. Você pode movê-la ou removê-la conforme necessário.
+            this.cadProdutosTableAdapter.Fill(this.autopeca33DataSet1.CadProdutos);
             // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.controlCaixa'. Você pode movê-la ou removê-la conforme necessário.
             this.controlCaixaTableAdapter.Fill(this.autopeca33DataSet.controlCaixa);
             controlCaixaBindingSource.AddNew();
@@ -68,6 +70,24 @@ namespace LojaAuto33
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFormPgto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Length != 0)
+            {
+                cadProdutosBindingSource.Filter = string.Format("cadProd_CD={0}", textBox2.Text);
+            }
         }
     }
 }

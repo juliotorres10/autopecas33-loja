@@ -39,6 +39,8 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cadastrofuncionariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -52,13 +54,11 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
-            this.cadastrofuncionariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cadastrofuncionariosTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.cadastrofuncionariosTableAdapter();
             this.lblSenha = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastrofuncionariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNome
@@ -149,6 +149,16 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(199, 20);
             this.textBox1.TabIndex = 0;
+            // 
+            // cadastrofuncionariosBindingSource
+            // 
+            this.cadastrofuncionariosBindingSource.DataMember = "cadastrofuncionarios";
+            this.cadastrofuncionariosBindingSource.DataSource = this.autopeca33DataSet;
+            // 
+            // autopeca33DataSet
+            // 
+            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
+            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox2
             // 
@@ -262,16 +272,6 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // autopeca33DataSet
-            // 
-            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
-            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cadastrofuncionariosBindingSource
-            // 
-            this.cadastrofuncionariosBindingSource.DataMember = "cadastrofuncionarios";
-            this.cadastrofuncionariosBindingSource.DataSource = this.autopeca33DataSet;
-            // 
             // cadastrofuncionariosTableAdapter
             // 
             this.cadastrofuncionariosTableAdapter.ClearBeforeFill = true;
@@ -279,7 +279,7 @@
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(44, 393);
+            this.lblSenha.Location = new System.Drawing.Point(35, 394);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(38, 13);
             this.lblSenha.TabIndex = 14;
@@ -326,8 +326,8 @@
             this.Name = "frmCadFunc";
             this.Text = "CADASTRO DE FUNCIONÁRIOS";
             this.Load += new System.EventHandler(this.fmrCadFunc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastrofuncionariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
