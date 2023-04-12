@@ -33,8 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>4.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -64,6 +63,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Autopeca33DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ClassUser.cs" />
+    <Compile Include="Conexao.cs" />
+    <Compile Include="frmAltClie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltClie.Designer.cs">
+      <DependentUpon>frmAltClie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPainel.Designer.cs">
+      <DependentUpon>MenuPainel.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPescCadFornec.cs">
       <SubType>Form</SubType>
@@ -163,6 +177,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAltClie.resx">
+      <DependentUpon>frmAltClie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPescCadFornec.resx">
       <DependentUpon>frmPescCadFornec.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +228,9 @@
     <EmbeddedResource Include="Frm_splash.resx">
       <DependentUpon>Frm_splash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuPainel.resx">
+      <DependentUpon>MenuPainel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -244,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="4.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

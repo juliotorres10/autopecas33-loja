@@ -5,6 +5,11 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaAuto33", "LojaAuto33\LojaAuto33.csproj", "{649875F8-BF2C-4EF0-A26F-1C77333F020E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{6FCC24F9-EEEE-4B30-8B7E-D8509887F80F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\4.ico = ..\..\..\Downloads\4.ico
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

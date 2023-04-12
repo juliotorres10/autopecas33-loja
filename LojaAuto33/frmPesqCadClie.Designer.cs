@@ -30,18 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnPesqPess = new System.Windows.Forms.Button();
-            this.btnIDClie = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblCodClie = new System.Windows.Forms.Label();
-            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
-            this.autopeca33DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cadastrodeclientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cadastrodeclientesTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.cadastrodeclientesTableAdapter();
             this.clieCDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clieNMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clieCPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,11 +38,21 @@
             this.clieemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clieendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clieCEPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cadastrodeclientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnPesqPess = new System.Windows.Forms.Button();
+            this.btnIDClie = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblCodClie = new System.Windows.Forms.Label();
+            this.cadastrodeclientesTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.cadastrodeclientesTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadastrodeclientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cadastrodeclientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -70,100 +68,13 @@
             this.clieemailDataGridViewTextBoxColumn,
             this.clieendDataGridViewTextBoxColumn,
             this.clieCEPDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.cadastrodeclientesBindingSource;
+            this.dataGridView1.DataSource = this.cadastrodeclientesBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(119, 164);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(595, 188);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(119, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(119, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 20);
-            this.textBox2.TabIndex = 2;
-            // 
-            // btnPesqPess
-            // 
-            this.btnPesqPess.Location = new System.Drawing.Point(339, 34);
-            this.btnPesqPess.Name = "btnPesqPess";
-            this.btnPesqPess.Size = new System.Drawing.Size(122, 29);
-            this.btnPesqPess.TabIndex = 3;
-            this.btnPesqPess.Text = "PESQUISA PESSOA";
-            this.btnPesqPess.UseVisualStyleBackColor = true;
-            // 
-            // btnIDClie
-            // 
-            this.btnIDClie.Location = new System.Drawing.Point(339, 77);
-            this.btnIDClie.Name = "btnIDClie";
-            this.btnIDClie.Size = new System.Drawing.Size(122, 31);
-            this.btnIDClie.TabIndex = 4;
-            this.btnIDClie.Text = "CÓDIGO ID";
-            this.btnIDClie.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Location = new System.Drawing.Point(119, 408);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(126, 30);
-            this.btnAlterar.TabIndex = 6;
-            this.btnAlterar.Text = "ALTERAR";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Location = new System.Drawing.Point(251, 407);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(126, 31);
-            this.btnVoltar.TabIndex = 7;
-            this.btnVoltar.Text = "VOLTAR";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(28, 44);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(85, 13);
-            this.lblNome.TabIndex = 7;
-            this.lblNome.Text = "Nome do Cliente";
-            // 
-            // lblCodClie
-            // 
-            this.lblCodClie.AutoSize = true;
-            this.lblCodClie.Location = new System.Drawing.Point(28, 83);
-            this.lblCodClie.Name = "lblCodClie";
-            this.lblCodClie.Size = new System.Drawing.Size(75, 13);
-            this.lblCodClie.TabIndex = 8;
-            this.lblCodClie.Text = "Código Cliente";
-            // 
-            // autopeca33DataSet
-            // 
-            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
-            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // autopeca33DataSetBindingSource
-            // 
-            this.autopeca33DataSetBindingSource.DataSource = this.autopeca33DataSet;
-            this.autopeca33DataSetBindingSource.Position = 0;
-            // 
-            // cadastrodeclientesBindingSource
-            // 
-            this.cadastrodeclientesBindingSource.DataMember = "cadastrodeclientes";
-            this.cadastrodeclientesBindingSource.DataSource = this.autopeca33DataSetBindingSource;
-            // 
-            // cadastrodeclientesTableAdapter
-            // 
-            this.cadastrodeclientesTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // clieCDDataGridViewTextBoxColumn
             // 
@@ -214,14 +125,101 @@
             this.clieCEPDataGridViewTextBoxColumn.HeaderText = "clie_CEP";
             this.clieCEPDataGridViewTextBoxColumn.Name = "clieCEPDataGridViewTextBoxColumn";
             // 
+            // cadastrodeclientesBindingSource1
+            // 
+            this.cadastrodeclientesBindingSource1.DataMember = "cadastrodeclientes";
+            this.cadastrodeclientesBindingSource1.DataSource = this.autopeca33DataSet;
+            // 
+            // autopeca33DataSet
+            // 
+            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
+            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(207, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(266, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(207, 81);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(266, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // btnPesqPess
+            // 
+            this.btnPesqPess.Location = new System.Drawing.Point(592, 32);
+            this.btnPesqPess.Name = "btnPesqPess";
+            this.btnPesqPess.Size = new System.Drawing.Size(122, 29);
+            this.btnPesqPess.TabIndex = 3;
+            this.btnPesqPess.Text = "NOME";
+            this.btnPesqPess.UseVisualStyleBackColor = true;
+            this.btnPesqPess.Click += new System.EventHandler(this.btnPesqPess_Click);
+            // 
+            // btnIDClie
+            // 
+            this.btnIDClie.Location = new System.Drawing.Point(592, 75);
+            this.btnIDClie.Name = "btnIDClie";
+            this.btnIDClie.Size = new System.Drawing.Size(122, 31);
+            this.btnIDClie.TabIndex = 4;
+            this.btnIDClie.Text = "CÓDIGO ID";
+            this.btnIDClie.UseVisualStyleBackColor = true;
+            this.btnIDClie.Click += new System.EventHandler(this.btnIDClie_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(207, 387);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(136, 38);
+            this.btnAlterar.TabIndex = 6;
+            this.btnAlterar.Text = "ALTERAR";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(358, 387);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(136, 39);
+            this.btnVoltar.TabIndex = 7;
+            this.btnVoltar.Text = "VOLTAR";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(116, 42);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(85, 13);
+            this.lblNome.TabIndex = 7;
+            this.lblNome.Text = "Nome do Cliente";
+            // 
+            // lblCodClie
+            // 
+            this.lblCodClie.AutoSize = true;
+            this.lblCodClie.Location = new System.Drawing.Point(116, 81);
+            this.lblCodClie.Name = "lblCodClie";
+            this.lblCodClie.Size = new System.Drawing.Size(75, 13);
+            this.lblCodClie.TabIndex = 8;
+            this.lblCodClie.Text = "Código Cliente";
+            // 
+            // cadastrodeclientesTableAdapter
+            // 
+            this.cadastrodeclientesTableAdapter.ClearBeforeFill = true;
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(391, 408);
+            this.button1.Location = new System.Drawing.Point(508, 389);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 29);
+            this.button1.Size = new System.Drawing.Size(140, 37);
             this.button1.TabIndex = 9;
             this.button1.Text = "DELETAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPesqCadClie
             // 
@@ -242,9 +240,8 @@
             this.Text = "PESQUISAR CADASTRO DE CLIENTES";
             this.Load += new System.EventHandler(this.frmPesqCadClie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadastrodeclientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cadastrodeclientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,10 +258,9 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCodClie;
-        private System.Windows.Forms.BindingSource autopeca33DataSetBindingSource;
         private Autopeca33DataSet autopeca33DataSet;
-        private System.Windows.Forms.BindingSource cadastrodeclientesBindingSource;
         private Autopeca33DataSetTableAdapters.cadastrodeclientesTableAdapter cadastrodeclientesTableAdapter;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clieCDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clieNMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clieCPFDataGridViewTextBoxColumn;
@@ -273,6 +269,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clieemailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clieendDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clieCEPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource cadastrodeclientesBindingSource1;
     }
 }

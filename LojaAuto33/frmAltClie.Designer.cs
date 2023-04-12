@@ -1,6 +1,6 @@
 ﻿namespace LojaAuto33
 {
-    partial class frmCadClie
+    partial class frmAltClie
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadClie));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltClie));
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblRG = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.cadastrodeclientesTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.cadastrodeclientesTableAdapter();
@@ -170,9 +171,18 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(253, 408);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(118, 30);
+            this.btnAlterar.TabIndex = 10;
+            this.btnAlterar.Text = "ALTERAR";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(253, 407);
+            this.btnVoltar.Location = new System.Drawing.Point(377, 407);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(97, 31);
             this.btnVoltar.TabIndex = 11;
@@ -182,7 +192,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(356, 409);
+            this.btnLimpar.Location = new System.Drawing.Point(480, 409);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(106, 29);
             this.btnLimpar.TabIndex = 12;
@@ -228,7 +238,7 @@
             this.textBox7.Size = new System.Drawing.Size(168, 20);
             this.textBox7.TabIndex = 16;
             // 
-            // frmCadClie
+            // frmAltClie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -239,6 +249,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.textBox6);
@@ -253,8 +264,8 @@
             this.Controls.Add(this.lblNome);
             this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeclientesBindingSource, "clie_fone", true));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmCadClie";
-            this.Text = "CADASTRO DE CLIENTE";
+            this.Name = "frmAltClie";
+            this.Text = "ALTERAR CADASTRO DO CLIENTES";
             this.Load += new System.EventHandler(this.frmCadClie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cadastrodeclientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
@@ -277,6 +288,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnLimpar;
         private Autopeca33DataSet autopeca33DataSet;

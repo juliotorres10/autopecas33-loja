@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LojaAuto33
 {
-    public partial class frmCadClie : Form
+    public partial class frmAltClie : Form
     {
-        public frmCadClie()
+        public frmAltClie()
         {
             InitializeComponent();
         }
@@ -24,10 +24,8 @@ namespace LojaAuto33
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Show();
-            this.Visible = false;
+        { 
+            this.Close();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -49,13 +47,17 @@ namespace LojaAuto33
             //limpar tela
             //    textBox1.Text = "";
             //  textbox.Text = (" ");
+
+            this.Close();
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+           
+
             // Abra o formulário de cadastro de clientes
             frmPesqCadClie frmCadClie = new frmPesqCadClie();
-            frmCadClie.ShowDialog();
+            frmCadClie.Show();
 
         }
 
@@ -63,12 +65,17 @@ namespace LojaAuto33
         {
             // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.cadastrodeclientes'. Você pode movê-la ou removê-la conforme necessário.
             this.cadastrodeclientesTableAdapter.Fill(this.autopeca33DataSet.cadastrodeclientes);
-            cadastrodeclientesBindingSource.AddNew();
 
-        }
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
+            if (Class1.codigo == "")
+            {
+                cadastrodeclientesBindingSource.AddNew();
+            }
+            else 
+            {
+                cadastrodeclientesBindingSource.Filter = string.Format("clie_CD={0}", Class1.codigo);
+            }
 
         }
     }
