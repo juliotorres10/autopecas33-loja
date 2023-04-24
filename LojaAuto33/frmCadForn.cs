@@ -17,6 +17,9 @@ namespace LojaAuto33
             InitializeComponent();
         }
 
+
+
+
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             Controls.OfType<TextBox>().Concat<Control>(Controls.OfType<ComboBox>()).
@@ -46,22 +49,36 @@ namespace LojaAuto33
             //aparece a mensagem quando der certo
             MessageBox.Show("Pessoa cadastrada com sucesso", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-            //limpar tela
+           // limpar tela
             //    textBox1.Text = "";
-            //  textbox.Text = (" ");
+            // textbox.Text = (" ");
+
         }
 
         private void frmCadForn_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet.cadastrodeFornecedores'. Você pode movê-la ou removê-la conforme necessário.
             this.cadastrodeFornecedoresTableAdapter.Fill(this.autopeca33DataSet.cadastrodeFornecedores);
-            cadastrodeFornecedoresBindingSource.AddNew();
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet1.cadastrodeFornecedores'. Você pode movê-la ou removê-la conforme necessário.
+          //  this.cadastrodeFornecedoresTableAdapter1.Fill(this.autopeca33DataSet1.cadastrodeFornecedores);
+            // TODO: esta linha de código carrega dados na tabela 'autopeca33DataSet1.cadastrodeFornecedores'. Você pode movê-la ou removê-la conforme /necessário.
+           // this.cadastrodeFornecedoresTableAdapter.Fill(this.autopeca33DataSet1.cadastrodeFornecedores);
+
+
+            Controls.OfType<TextBox>().Concat<Control>(Controls.OfType<ComboBox>()).Concat<Control>(Controls.OfType<CheckBox>()).ToList().ForEach(control => control.Text = "");
 
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPesq_Click(object sender, EventArgs e)
+        {
+            // Abra o formulário de cadastro de fornecedores
+            frmPesqCadFornec frmCadForn = new frmPesqCadFornec();
+            frmCadForn.ShowDialog();
         }
     }
 }

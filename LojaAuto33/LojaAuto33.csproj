@@ -73,17 +73,23 @@
     <Compile Include="frmAltClie.Designer.cs">
       <DependentUpon>frmAltClie.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPesqCadFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesqCadFunc.Designer.cs">
+      <DependentUpon>frmPesqCadFunc.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPainel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuPainel.Designer.cs">
       <DependentUpon>MenuPainel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPescCadFornec.cs">
+    <Compile Include="frmPesqCadFornec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPescCadFornec.Designer.cs">
-      <DependentUpon>frmPescCadFornec.cs</DependentUpon>
+    <Compile Include="frmPesqCadFornec.Designer.cs">
+      <DependentUpon>frmPesqCadFornec.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPesqControlEstoq.cs">
       <SubType>Form</SubType>
@@ -180,8 +186,11 @@
     <EmbeddedResource Include="frmAltClie.resx">
       <DependentUpon>frmAltClie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPescCadFornec.resx">
-      <DependentUpon>frmPescCadFornec.cs</DependentUpon>
+    <EmbeddedResource Include="frmPesqCadFornec.resx">
+      <DependentUpon>frmPesqCadFornec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesqCadFunc.resx">
+      <DependentUpon>frmPesqCadFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesqControlEstoq.resx">
       <DependentUpon>frmPesqControlEstoq.cs</DependentUpon>

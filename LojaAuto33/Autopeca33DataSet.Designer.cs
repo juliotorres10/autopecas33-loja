@@ -44,7 +44,7 @@ namespace LojaAuto33 {
         
         private global::System.Data.DataRelation relationFK__controlEs__forn___29221CFB;
         
-        private global::System.Data.DataRelation relationFK__trocaProd__contr__3E1D39E1;
+        private global::System.Data.DataRelation relationFK__trocaProd__contr__45BE5BA9;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -370,7 +370,7 @@ namespace LojaAuto33 {
             }
             this.relationFK__controlEs__cadPr__2A164134 = this.Relations["FK__controlEs__cadPr__2A164134"];
             this.relationFK__controlEs__forn___29221CFB = this.Relations["FK__controlEs__forn___29221CFB"];
-            this.relationFK__trocaProd__contr__3E1D39E1 = this.Relations["FK__trocaProd__contr__3E1D39E1"];
+            this.relationFK__trocaProd__contr__45BE5BA9 = this.Relations["FK__trocaProd__contr__45BE5BA9"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -405,10 +405,10 @@ namespace LojaAuto33 {
                         this.tablecadastrodeFornecedores.forn_idColumn}, new global::System.Data.DataColumn[] {
                         this.tablecontrolEstoque.forn_idColumn}, false);
             this.Relations.Add(this.relationFK__controlEs__forn___29221CFB);
-            this.relationFK__trocaProd__contr__3E1D39E1 = new global::System.Data.DataRelation("FK__trocaProd__contr__3E1D39E1", new global::System.Data.DataColumn[] {
+            this.relationFK__trocaProd__contr__45BE5BA9 = new global::System.Data.DataRelation("FK__trocaProd__contr__45BE5BA9", new global::System.Data.DataColumn[] {
                         this.tablecontrolCaixa.controlCaixa_CDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletrocaProd.controlCaixa_CDColumn}, false);
-            this.Relations.Add(this.relationFK__trocaProd__contr__3E1D39E1);
+            this.Relations.Add(this.relationFK__trocaProd__contr__45BE5BA9);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1456,7 +1456,7 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public cadastrofuncionariosRow AddcadastrofuncionariosRow(string func_NM, string func_CPF, string func_RG, System.DateTime func_datadenasc, string func_end, string func_fone, string func_email, string func_usuario, string func_senha, string func_cargo) {
+            public cadastrofuncionariosRow AddcadastrofuncionariosRow(string func_NM, string func_CPF, string func_RG, string func_datadenasc, string func_end, string func_fone, string func_email, string func_usuario, string func_senha, string func_cargo) {
                 cadastrofuncionariosRow rowcadastrofuncionariosRow = ((cadastrofuncionariosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1523,7 +1523,7 @@ namespace LojaAuto33 {
                 base.Columns.Add(this.columnfunc_CPF);
                 this.columnfunc_RG = new global::System.Data.DataColumn("func_RG", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfunc_RG);
-                this.columnfunc_datadenasc = new global::System.Data.DataColumn("func_datadenasc", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnfunc_datadenasc = new global::System.Data.DataColumn("func_datadenasc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfunc_datadenasc);
                 this.columnfunc_end = new global::System.Data.DataColumn("func_end", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfunc_end);
@@ -1552,6 +1552,7 @@ namespace LojaAuto33 {
                 this.columnfunc_RG.AllowDBNull = false;
                 this.columnfunc_RG.MaxLength = 15;
                 this.columnfunc_datadenasc.AllowDBNull = false;
+                this.columnfunc_datadenasc.MaxLength = 30;
                 this.columnfunc_end.AllowDBNull = false;
                 this.columnfunc_end.MaxLength = 40;
                 this.columnfunc_fone.AllowDBNull = false;
@@ -2192,7 +2193,7 @@ namespace LojaAuto33 {
                 this.columncontrolCaixa_CD.ReadOnly = true;
                 this.columncontrolCaixa_CD.Unique = true;
                 this.columncadProd_CD.AllowDBNull = false;
-                this.columncadProd_CD.MaxLength = 40;
+                this.columncadProd_CD.MaxLength = 2147483647;
                 this.columncontrolCaixa_valorTotal.AllowDBNull = false;
                 this.columncontrolCaixa_formaPgmo.AllowDBNull = false;
                 this.columncontrolCaixa_formaPgmo.MaxLength = 40;
@@ -2735,8 +2736,6 @@ namespace LojaAuto33 {
             
             private global::System.Data.DataColumn columnpedCompra_CD;
             
-            private global::System.Data.DataColumn columnforn_id;
-            
             private global::System.Data.DataColumn columncadProd_CD;
             
             private global::System.Data.DataColumn columnpedCompra_CNPJ;
@@ -2789,14 +2788,6 @@ namespace LojaAuto33 {
             public global::System.Data.DataColumn pedCompra_CDColumn {
                 get {
                     return this.columnpedCompra_CD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn forn_idColumn {
-                get {
-                    return this.columnforn_id;
                 }
             }
             
@@ -2893,11 +2884,10 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public pedidosdecomprasRow AddpedidosdecomprasRow(string forn_id, string cadProd_CD, string pedCompra_CNPJ, string pedCompra_desc, string pedCompra_qtd, System.DateTime pedCompra_dataDeEntr, System.DateTime pedCompra_dataDeSaida, System.DateTime pedCompra_dataDevolucao) {
+            public pedidosdecomprasRow AddpedidosdecomprasRow(string cadProd_CD, string pedCompra_CNPJ, string pedCompra_desc, string pedCompra_qtd, string pedCompra_dataDeEntr, string pedCompra_dataDeSaida, string pedCompra_dataDevolucao) {
                 pedidosdecomprasRow rowpedidosdecomprasRow = ((pedidosdecomprasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        forn_id,
                         cadProd_CD,
                         pedCompra_CNPJ,
                         pedCompra_desc,
@@ -2935,7 +2925,6 @@ namespace LojaAuto33 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnpedCompra_CD = base.Columns["pedCompra_CD"];
-                this.columnforn_id = base.Columns["forn_id"];
                 this.columncadProd_CD = base.Columns["cadProd_CD"];
                 this.columnpedCompra_CNPJ = base.Columns["pedCompra_CNPJ"];
                 this.columnpedCompra_desc = base.Columns["pedCompra_desc"];
@@ -2950,8 +2939,6 @@ namespace LojaAuto33 {
             private void InitClass() {
                 this.columnpedCompra_CD = new global::System.Data.DataColumn("pedCompra_CD", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpedCompra_CD);
-                this.columnforn_id = new global::System.Data.DataColumn("forn_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnforn_id);
                 this.columncadProd_CD = new global::System.Data.DataColumn("cadProd_CD", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncadProd_CD);
                 this.columnpedCompra_CNPJ = new global::System.Data.DataColumn("pedCompra_CNPJ", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2960,11 +2947,11 @@ namespace LojaAuto33 {
                 base.Columns.Add(this.columnpedCompra_desc);
                 this.columnpedCompra_qtd = new global::System.Data.DataColumn("pedCompra_qtd", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpedCompra_qtd);
-                this.columnpedCompra_dataDeEntr = new global::System.Data.DataColumn("pedCompra_dataDeEntr", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnpedCompra_dataDeEntr = new global::System.Data.DataColumn("pedCompra_dataDeEntr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpedCompra_dataDeEntr);
-                this.columnpedCompra_dataDeSaida = new global::System.Data.DataColumn("pedCompra_dataDeSaida", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnpedCompra_dataDeSaida = new global::System.Data.DataColumn("pedCompra_dataDeSaida", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpedCompra_dataDeSaida);
-                this.columnpedCompra_dataDevolucao = new global::System.Data.DataColumn("pedCompra_dataDevolucao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnpedCompra_dataDevolucao = new global::System.Data.DataColumn("pedCompra_dataDevolucao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpedCompra_dataDevolucao);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpedCompra_CD}, true));
@@ -2974,8 +2961,6 @@ namespace LojaAuto33 {
                 this.columnpedCompra_CD.AllowDBNull = false;
                 this.columnpedCompra_CD.ReadOnly = true;
                 this.columnpedCompra_CD.Unique = true;
-                this.columnforn_id.AllowDBNull = false;
-                this.columnforn_id.MaxLength = 50;
                 this.columncadProd_CD.AllowDBNull = false;
                 this.columncadProd_CD.MaxLength = 50;
                 this.columnpedCompra_CNPJ.AllowDBNull = false;
@@ -2984,6 +2969,12 @@ namespace LojaAuto33 {
                 this.columnpedCompra_desc.MaxLength = 50;
                 this.columnpedCompra_qtd.AllowDBNull = false;
                 this.columnpedCompra_qtd.MaxLength = 50;
+                this.columnpedCompra_dataDeEntr.AllowDBNull = false;
+                this.columnpedCompra_dataDeEntr.MaxLength = 50;
+                this.columnpedCompra_dataDeSaida.AllowDBNull = false;
+                this.columnpedCompra_dataDeSaida.MaxLength = 50;
+                this.columnpedCompra_dataDevolucao.AllowDBNull = false;
+                this.columnpedCompra_dataDevolucao.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3227,15 +3218,15 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public trocaProdRow AddtrocaProdRow(controlCaixaRow parentcontrolCaixaRowByFK__trocaProd__contr__3E1D39E1, System.DateTime trocaProd_dataTroca, string trocaProd_qtd) {
+            public trocaProdRow AddtrocaProdRow(controlCaixaRow parentcontrolCaixaRowByFK__trocaProd__contr__45BE5BA9, System.DateTime trocaProd_dataTroca, string trocaProd_qtd) {
                 trocaProdRow rowtrocaProdRow = ((trocaProdRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         trocaProd_dataTroca,
                         trocaProd_qtd};
-                if ((parentcontrolCaixaRowByFK__trocaProd__contr__3E1D39E1 != null)) {
-                    columnValuesArray[1] = parentcontrolCaixaRowByFK__trocaProd__contr__3E1D39E1[0];
+                if ((parentcontrolCaixaRowByFK__trocaProd__contr__45BE5BA9 != null)) {
+                    columnValuesArray[1] = parentcontrolCaixaRowByFK__trocaProd__contr__45BE5BA9[0];
                 }
                 rowtrocaProdRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtrocaProdRow);
@@ -3702,9 +3693,9 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime func_datadenasc {
+            public string func_datadenasc {
                 get {
-                    return ((global::System.DateTime)(this[this.tablecadastrofuncionarios.func_datadenascColumn]));
+                    return ((string)(this[this.tablecadastrofuncionarios.func_datadenascColumn]));
                 }
                 set {
                     this[this.tablecadastrofuncionarios.func_datadenascColumn] = value;
@@ -3920,11 +3911,11 @@ namespace LojaAuto33 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public trocaProdRow[] GettrocaProdRows() {
-                if ((this.Table.ChildRelations["FK__trocaProd__contr__3E1D39E1"] == null)) {
+                if ((this.Table.ChildRelations["FK__trocaProd__contr__45BE5BA9"] == null)) {
                     return new trocaProdRow[0];
                 }
                 else {
-                    return ((trocaProdRow[])(base.GetChildRows(this.Table.ChildRelations["FK__trocaProd__contr__3E1D39E1"])));
+                    return ((trocaProdRow[])(base.GetChildRows(this.Table.ChildRelations["FK__trocaProd__contr__45BE5BA9"])));
                 }
             }
         }
@@ -4171,17 +4162,6 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string forn_id {
-                get {
-                    return ((string)(this[this.tablepedidosdecompras.forn_idColumn]));
-                }
-                set {
-                    this[this.tablepedidosdecompras.forn_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string cadProd_CD {
                 get {
                     return ((string)(this[this.tablepedidosdecompras.cadProd_CDColumn]));
@@ -4226,14 +4206,9 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime pedCompra_dataDeEntr {
+            public string pedCompra_dataDeEntr {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablepedidosdecompras.pedCompra_dataDeEntrColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'pedCompra_dataDeEntr\' na tabela \'pedidosdecompras\' é DBNull.", e);
-                    }
+                    return ((string)(this[this.tablepedidosdecompras.pedCompra_dataDeEntrColumn]));
                 }
                 set {
                     this[this.tablepedidosdecompras.pedCompra_dataDeEntrColumn] = value;
@@ -4242,14 +4217,9 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime pedCompra_dataDeSaida {
+            public string pedCompra_dataDeSaida {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablepedidosdecompras.pedCompra_dataDeSaidaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'pedCompra_dataDeSaida\' na tabela \'pedidosdecompras\' é DBNull.", e);
-                    }
+                    return ((string)(this[this.tablepedidosdecompras.pedCompra_dataDeSaidaColumn]));
                 }
                 set {
                     this[this.tablepedidosdecompras.pedCompra_dataDeSaidaColumn] = value;
@@ -4258,55 +4228,13 @@ namespace LojaAuto33 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime pedCompra_dataDevolucao {
+            public string pedCompra_dataDevolucao {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablepedidosdecompras.pedCompra_dataDevolucaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'pedCompra_dataDevolucao\' na tabela \'pedidosdecompras\' é DBNull" +
-                                ".", e);
-                    }
+                    return ((string)(this[this.tablepedidosdecompras.pedCompra_dataDevolucaoColumn]));
                 }
                 set {
                     this[this.tablepedidosdecompras.pedCompra_dataDevolucaoColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IspedCompra_dataDeEntrNull() {
-                return this.IsNull(this.tablepedidosdecompras.pedCompra_dataDeEntrColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetpedCompra_dataDeEntrNull() {
-                this[this.tablepedidosdecompras.pedCompra_dataDeEntrColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IspedCompra_dataDeSaidaNull() {
-                return this.IsNull(this.tablepedidosdecompras.pedCompra_dataDeSaidaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetpedCompra_dataDeSaidaNull() {
-                this[this.tablepedidosdecompras.pedCompra_dataDeSaidaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IspedCompra_dataDevolucaoNull() {
-                return this.IsNull(this.tablepedidosdecompras.pedCompra_dataDevolucaoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetpedCompra_dataDevolucaoNull() {
-                this[this.tablepedidosdecompras.pedCompra_dataDevolucaoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4382,10 +4310,10 @@ namespace LojaAuto33 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public controlCaixaRow controlCaixaRow {
                 get {
-                    return ((controlCaixaRow)(this.GetParentRow(this.Table.ParentRelations["FK__trocaProd__contr__3E1D39E1"])));
+                    return ((controlCaixaRow)(this.GetParentRow(this.Table.ParentRelations["FK__trocaProd__contr__45BE5BA9"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__trocaProd__contr__3E1D39E1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__trocaProd__contr__45BE5BA9"]);
                 }
             }
             
@@ -5806,7 +5734,7 @@ SELECT forn_id, forn_CNPJ, forn_endereço, forn_fone, forn_email, forn_cep, forn
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_NM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_NM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_CPF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_RG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_RG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_datadenasc", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_datadenasc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_datadenasc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_datadenasc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_end", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_end", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_fone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_fone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5821,7 +5749,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_NM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_NM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_CPF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_RG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_RG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_datadenasc", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_datadenasc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_datadenasc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_datadenasc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_end", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_end", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_fone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_fone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5836,7 +5764,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_NM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_NM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_CPF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_RG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_RG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_datadenasc", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_datadenasc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_datadenasc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_datadenasc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_end", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_end", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_fone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_fone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@func_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5847,7 +5775,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_NM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_NM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_CPF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_RG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_RG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_datadenasc", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_datadenasc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_datadenasc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_datadenasc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_end", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_end", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_fone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_fone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_func_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "func_email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5933,7 +5861,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_func_CD, string Original_func_NM, string Original_func_CPF, string Original_func_RG, System.DateTime Original_func_datadenasc, string Original_func_end, string Original_func_fone, string Original_func_email, string Original_func_usuario, string Original_func_senha, string Original_func_cargo) {
+        public virtual int Delete(int Original_func_CD, string Original_func_NM, string Original_func_CPF, string Original_func_RG, string Original_func_datadenasc, string Original_func_end, string Original_func_fone, string Original_func_email, string Original_func_usuario, string Original_func_senha, string Original_func_cargo) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_func_CD));
             if ((Original_func_NM == null)) {
                 throw new global::System.ArgumentNullException("Original_func_NM");
@@ -5953,7 +5881,12 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_func_RG));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_func_datadenasc));
+            if ((Original_func_datadenasc == null)) {
+                throw new global::System.ArgumentNullException("Original_func_datadenasc");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_func_datadenasc));
+            }
             if ((Original_func_end == null)) {
                 throw new global::System.ArgumentNullException("Original_func_end");
             }
@@ -6010,7 +5943,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string func_NM, string func_CPF, string func_RG, System.DateTime func_datadenasc, string func_end, string func_fone, string func_email, string func_usuario, string func_senha, string func_cargo) {
+        public virtual int Insert(string func_NM, string func_CPF, string func_RG, string func_datadenasc, string func_end, string func_fone, string func_email, string func_usuario, string func_senha, string func_cargo) {
             if ((func_NM == null)) {
                 throw new global::System.ArgumentNullException("func_NM");
             }
@@ -6029,7 +5962,12 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(func_RG));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(func_datadenasc));
+            if ((func_datadenasc == null)) {
+                throw new global::System.ArgumentNullException("func_datadenasc");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(func_datadenasc));
+            }
             if ((func_end == null)) {
                 throw new global::System.ArgumentNullException("func_end");
             }
@@ -6090,7 +6028,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
                     string func_NM, 
                     string func_CPF, 
                     string func_RG, 
-                    System.DateTime func_datadenasc, 
+                    string func_datadenasc, 
                     string func_end, 
                     string func_fone, 
                     string func_email, 
@@ -6101,7 +6039,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
                     string Original_func_NM, 
                     string Original_func_CPF, 
                     string Original_func_RG, 
-                    System.DateTime Original_func_datadenasc, 
+                    string Original_func_datadenasc, 
                     string Original_func_end, 
                     string Original_func_fone, 
                     string Original_func_email, 
@@ -6127,7 +6065,12 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(func_RG));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(func_datadenasc));
+            if ((func_datadenasc == null)) {
+                throw new global::System.ArgumentNullException("func_datadenasc");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(func_datadenasc));
+            }
             if ((func_end == null)) {
                 throw new global::System.ArgumentNullException("func_end");
             }
@@ -6183,7 +6126,12 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_func_RG));
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_func_datadenasc));
+            if ((Original_func_datadenasc == null)) {
+                throw new global::System.ArgumentNullException("Original_func_datadenasc");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_func_datadenasc));
+            }
             if ((Original_func_end == null)) {
                 throw new global::System.ArgumentNullException("Original_func_end");
             }
@@ -6245,7 +6193,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
                     string func_NM, 
                     string func_CPF, 
                     string func_RG, 
-                    System.DateTime func_datadenasc, 
+                    string func_datadenasc, 
                     string func_end, 
                     string func_fone, 
                     string func_email, 
@@ -6256,7 +6204,7 @@ SELECT func_CD, func_NM, func_CPF, func_RG, func_datadenasc, func_end, func_fone
                     string Original_func_NM, 
                     string Original_func_CPF, 
                     string Original_func_RG, 
-                    System.DateTime Original_func_datadenasc, 
+                    string Original_func_datadenasc, 
                     string Original_func_end, 
                     string Original_func_fone, 
                     string Original_func_email, 
@@ -6753,10 +6701,9 @@ SELECT cadProd_CD, cadProd_desc, cadProd_marca, cadProd_valVenda FROM auto33.Cad
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[controlCaixa] WHERE (([controlCaixa_CD] = @Original_controlCaixa_CD) AND ([cadProd_CD] = @Original_cadProd_CD) AND ([controlCaixa_valorTotal] = @Original_controlCaixa_valorTotal) AND ([controlCaixa_formaPgmo] = @Original_controlCaixa_formaPgmo) AND ([controlCaixa_datavenda] = @Original_controlCaixa_datavenda))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[controlCaixa] WHERE (([controlCaixa_CD] = @Original_controlCaixa_CD) AND ([controlCaixa_valorTotal] = @Original_controlCaixa_valorTotal) AND ([controlCaixa_formaPgmo] = @Original_controlCaixa_formaPgmo) AND ([controlCaixa_datavenda] = @Original_controlCaixa_datavenda))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_valorTotal", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valorTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_formaPgmo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_formaPgmo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_datavenda", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_datavenda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -6765,21 +6712,20 @@ SELECT cadProd_CD, cadProd_desc, cadProd_marca, cadProd_valVenda FROM auto33.Cad
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [auto33].[controlCaixa] ([cadProd_CD], [controlCaixa_valorTotal], [controlCaixa_formaPgmo], [controlCaixa_datavenda]) VALUES (@cadProd_CD, @controlCaixa_valorTotal, @controlCaixa_formaPgmo, @controlCaixa_datavenda);
 SELECT controlCaixa_CD, cadProd_CD, controlCaixa_valorTotal, controlCaixa_formaPgmo, controlCaixa_datavenda FROM auto33.controlCaixa WHERE (controlCaixa_CD = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_valorTotal", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valorTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_formaPgmo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_formaPgmo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_datavenda", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_datavenda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[controlCaixa] SET [cadProd_CD] = @cadProd_CD, [controlCaixa_valorTotal] = @controlCaixa_valorTotal, [controlCaixa_formaPgmo] = @controlCaixa_formaPgmo, [controlCaixa_datavenda] = @controlCaixa_datavenda WHERE (([controlCaixa_CD] = @Original_controlCaixa_CD) AND ([cadProd_CD] = @Original_cadProd_CD) AND ([controlCaixa_valorTotal] = @Original_controlCaixa_valorTotal) AND ([controlCaixa_formaPgmo] = @Original_controlCaixa_formaPgmo) AND ([controlCaixa_datavenda] = @Original_controlCaixa_datavenda));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[controlCaixa] SET [cadProd_CD] = @cadProd_CD, [controlCaixa_valorTotal] = @controlCaixa_valorTotal, [controlCaixa_formaPgmo] = @controlCaixa_formaPgmo, [controlCaixa_datavenda] = @controlCaixa_datavenda WHERE (([controlCaixa_CD] = @Original_controlCaixa_CD) AND ([controlCaixa_valorTotal] = @Original_controlCaixa_valorTotal) AND ([controlCaixa_formaPgmo] = @Original_controlCaixa_formaPgmo) AND ([controlCaixa_datavenda] = @Original_controlCaixa_datavenda));
 SELECT controlCaixa_CD, cadProd_CD, controlCaixa_valorTotal, controlCaixa_formaPgmo, controlCaixa_datavenda FROM auto33.controlCaixa WHERE (controlCaixa_CD = @controlCaixa_CD)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_valorTotal", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valorTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_formaPgmo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_formaPgmo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@controlCaixa_datavenda", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_datavenda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_valorTotal", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_valorTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_formaPgmo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_formaPgmo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_controlCaixa_datavenda", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "controlCaixa_datavenda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -6861,22 +6807,16 @@ SELECT controlCaixa_CD, cadProd_CD, controlCaixa_valorTotal, controlCaixa_formaP
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_controlCaixa_CD, string Original_cadProd_CD, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda) {
+        public virtual int Delete(int Original_controlCaixa_CD, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_controlCaixa_CD));
-            if ((Original_cadProd_CD == null)) {
-                throw new global::System.ArgumentNullException("Original_cadProd_CD");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_cadProd_CD));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_controlCaixa_valorTotal));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_controlCaixa_valorTotal));
             if ((Original_controlCaixa_formaPgmo == null)) {
                 throw new global::System.ArgumentNullException("Original_controlCaixa_formaPgmo");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_controlCaixa_formaPgmo));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_controlCaixa_formaPgmo));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_controlCaixa_datavenda));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_controlCaixa_datavenda));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6932,7 +6872,7 @@ SELECT controlCaixa_CD, cadProd_CD, controlCaixa_valorTotal, controlCaixa_formaP
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string cadProd_CD, decimal controlCaixa_valorTotal, string controlCaixa_formaPgmo, System.DateTime controlCaixa_datavenda, int Original_controlCaixa_CD, string Original_cadProd_CD, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda, int controlCaixa_CD) {
+        public virtual int Update(string cadProd_CD, decimal controlCaixa_valorTotal, string controlCaixa_formaPgmo, System.DateTime controlCaixa_datavenda, int Original_controlCaixa_CD, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda, int controlCaixa_CD) {
             if ((cadProd_CD == null)) {
                 throw new global::System.ArgumentNullException("cadProd_CD");
             }
@@ -6948,21 +6888,15 @@ SELECT controlCaixa_CD, cadProd_CD, controlCaixa_valorTotal, controlCaixa_formaP
             }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(controlCaixa_datavenda));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_controlCaixa_CD));
-            if ((Original_cadProd_CD == null)) {
-                throw new global::System.ArgumentNullException("Original_cadProd_CD");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_cadProd_CD));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_controlCaixa_valorTotal));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Original_controlCaixa_valorTotal));
             if ((Original_controlCaixa_formaPgmo == null)) {
                 throw new global::System.ArgumentNullException("Original_controlCaixa_formaPgmo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_controlCaixa_formaPgmo));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_controlCaixa_formaPgmo));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_controlCaixa_datavenda));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(controlCaixa_CD));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_controlCaixa_datavenda));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(controlCaixa_CD));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6983,8 +6917,8 @@ SELECT controlCaixa_CD, cadProd_CD, controlCaixa_valorTotal, controlCaixa_formaP
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string cadProd_CD, decimal controlCaixa_valorTotal, string controlCaixa_formaPgmo, System.DateTime controlCaixa_datavenda, int Original_controlCaixa_CD, string Original_cadProd_CD, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda) {
-            return this.Update(cadProd_CD, controlCaixa_valorTotal, controlCaixa_formaPgmo, controlCaixa_datavenda, Original_controlCaixa_CD, Original_cadProd_CD, Original_controlCaixa_valorTotal, Original_controlCaixa_formaPgmo, Original_controlCaixa_datavenda, Original_controlCaixa_CD);
+        public virtual int Update(string cadProd_CD, decimal controlCaixa_valorTotal, string controlCaixa_formaPgmo, System.DateTime controlCaixa_datavenda, int Original_controlCaixa_CD, decimal Original_controlCaixa_valorTotal, string Original_controlCaixa_formaPgmo, System.DateTime Original_controlCaixa_datavenda) {
+            return this.Update(cadProd_CD, controlCaixa_valorTotal, controlCaixa_formaPgmo, controlCaixa_datavenda, Original_controlCaixa_CD, Original_controlCaixa_valorTotal, Original_controlCaixa_formaPgmo, Original_controlCaixa_datavenda, Original_controlCaixa_CD);
         }
     }
     
@@ -7703,7 +7637,6 @@ SELECT controlEst_CD, forn_id, cadProd_CD, controlEst_CNPJ, controlEst_descr, co
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "pedidosdecompras";
             tableMapping.ColumnMappings.Add("pedCompra_CD", "pedCompra_CD");
-            tableMapping.ColumnMappings.Add("forn_id", "forn_id");
             tableMapping.ColumnMappings.Add("cadProd_CD", "cadProd_CD");
             tableMapping.ColumnMappings.Add("pedCompra_CNPJ", "pedCompra_CNPJ");
             tableMapping.ColumnMappings.Add("pedCompra_desc", "pedCompra_desc");
@@ -7714,58 +7647,48 @@ SELECT controlEst_CD, forn_id, cadProd_CD, controlEst_CNPJ, controlEst_descr, co
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[pedidosdecompras] WHERE (([pedCompra_CD] = @Original_pedCompra_CD) AND ([forn_id] = @Original_forn_id) AND ([cadProd_CD] = @Original_cadProd_CD) AND ([pedCompra_CNPJ] = @Original_pedCompra_CNPJ) AND ([pedCompra_desc] = @Original_pedCompra_desc) AND ([pedCompra_qtd] = @Original_pedCompra_qtd) AND ((@IsNull_pedCompra_dataDeEntr = 1 AND [pedCompra_dataDeEntr] IS NULL) OR ([pedCompra_dataDeEntr] = @Original_pedCompra_dataDeEntr)) AND ((@IsNull_pedCompra_dataDeSaida = 1 AND [pedCompra_dataDeSaida] IS NULL) OR ([pedCompra_dataDeSaida] = @Original_pedCompra_dataDeSaida)) AND ((@IsNull_pedCompra_dataDevolucao = 1 AND [pedCompra_dataDevolucao] IS NULL) OR ([pedCompra_dataDevolucao] = @Original_pedCompra_dataDevolucao)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [auto33].[pedidosdecompras] WHERE (([pedCompra_CD] = @Original_pedCompra_CD) AND ([cadProd_CD] = @Original_cadProd_CD) AND ([pedCompra_CNPJ] = @Original_pedCompra_CNPJ) AND ([pedCompra_desc] = @Original_pedCompra_desc) AND ([pedCompra_qtd] = @Original_pedCompra_qtd) AND ([pedCompra_dataDeEntr] = @Original_pedCompra_dataDeEntr) AND ([pedCompra_dataDeSaida] = @Original_pedCompra_dataDeSaida) AND ([pedCompra_dataDevolucao] = @Original_pedCompra_dataDevolucao))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_forn_id", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "forn_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_CNPJ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_CNPJ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_qtd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pedCompra_dataDeEntr", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDeEntr", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pedCompra_dataDeSaida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDeSaida", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pedCompra_dataDevolucao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDevolucao", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDeEntr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDeSaida", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDevolucao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [auto33].[pedidosdecompras] ([forn_id], [cadProd_CD], [pedCompra_CNPJ], [pedCompra_desc], [pedCompra_qtd], [pedCompra_dataDeEntr], [pedCompra_dataDeSaida], [pedCompra_dataDevolucao]) VALUES (@forn_id, @cadProd_CD, @pedCompra_CNPJ, @pedCompra_desc, @pedCompra_qtd, @pedCompra_dataDeEntr, @pedCompra_dataDeSaida, @pedCompra_dataDevolucao);
-SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCompra_qtd, pedCompra_dataDeEntr, pedCompra_dataDeSaida, pedCompra_dataDevolucao FROM auto33.pedidosdecompras WHERE (pedCompra_CD = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [auto33].[pedidosdecompras] ([cadProd_CD], [pedCompra_CNPJ], [pedCompra_desc], [pedCompra_qtd], [pedCompra_dataDeEntr], [pedCompra_dataDeSaida], [pedCompra_dataDevolucao]) VALUES (@cadProd_CD, @pedCompra_CNPJ, @pedCompra_desc, @pedCompra_qtd, @pedCompra_dataDeEntr, @pedCompra_dataDeSaida, @pedCompra_dataDevolucao);
+SELECT pedCompra_CD, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCompra_qtd, pedCompra_dataDeEntr, pedCompra_dataDeSaida, pedCompra_dataDevolucao FROM auto33.pedidosdecompras WHERE (pedCompra_CD = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@forn_id", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "forn_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_CNPJ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_CNPJ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_qtd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDeEntr", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDeSaida", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDevolucao", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDeEntr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDeSaida", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDevolucao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[pedidosdecompras] SET [forn_id] = @forn_id, [cadProd_CD] = @cadProd_CD, [pedCompra_CNPJ] = @pedCompra_CNPJ, [pedCompra_desc] = @pedCompra_desc, [pedCompra_qtd] = @pedCompra_qtd, [pedCompra_dataDeEntr] = @pedCompra_dataDeEntr, [pedCompra_dataDeSaida] = @pedCompra_dataDeSaida, [pedCompra_dataDevolucao] = @pedCompra_dataDevolucao WHERE (([pedCompra_CD] = @Original_pedCompra_CD) AND ([forn_id] = @Original_forn_id) AND ([cadProd_CD] = @Original_cadProd_CD) AND ([pedCompra_CNPJ] = @Original_pedCompra_CNPJ) AND ([pedCompra_desc] = @Original_pedCompra_desc) AND ([pedCompra_qtd] = @Original_pedCompra_qtd) AND ((@IsNull_pedCompra_dataDeEntr = 1 AND [pedCompra_dataDeEntr] IS NULL) OR ([pedCompra_dataDeEntr] = @Original_pedCompra_dataDeEntr)) AND ((@IsNull_pedCompra_dataDeSaida = 1 AND [pedCompra_dataDeSaida] IS NULL) OR ([pedCompra_dataDeSaida] = @Original_pedCompra_dataDeSaida)) AND ((@IsNull_pedCompra_dataDevolucao = 1 AND [pedCompra_dataDevolucao] IS NULL) OR ([pedCompra_dataDevolucao] = @Original_pedCompra_dataDevolucao)));
-SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCompra_qtd, pedCompra_dataDeEntr, pedCompra_dataDeSaida, pedCompra_dataDevolucao FROM auto33.pedidosdecompras WHERE (pedCompra_CD = @pedCompra_CD)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [auto33].[pedidosdecompras] SET [cadProd_CD] = @cadProd_CD, [pedCompra_CNPJ] = @pedCompra_CNPJ, [pedCompra_desc] = @pedCompra_desc, [pedCompra_qtd] = @pedCompra_qtd, [pedCompra_dataDeEntr] = @pedCompra_dataDeEntr, [pedCompra_dataDeSaida] = @pedCompra_dataDeSaida, [pedCompra_dataDevolucao] = @pedCompra_dataDevolucao WHERE (([pedCompra_CD] = @Original_pedCompra_CD) AND ([cadProd_CD] = @Original_cadProd_CD) AND ([pedCompra_CNPJ] = @Original_pedCompra_CNPJ) AND ([pedCompra_desc] = @Original_pedCompra_desc) AND ([pedCompra_qtd] = @Original_pedCompra_qtd) AND ([pedCompra_dataDeEntr] = @Original_pedCompra_dataDeEntr) AND ([pedCompra_dataDeSaida] = @Original_pedCompra_dataDeSaida) AND ([pedCompra_dataDevolucao] = @Original_pedCompra_dataDevolucao));
+SELECT pedCompra_CD, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCompra_qtd, pedCompra_dataDeEntr, pedCompra_dataDeSaida, pedCompra_dataDevolucao FROM auto33.pedidosdecompras WHERE (pedCompra_CD = @pedCompra_CD)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@forn_id", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "forn_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_CNPJ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_CNPJ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_desc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_qtd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDeEntr", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDeSaida", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDevolucao", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDeEntr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDeSaida", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_dataDevolucao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_CD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_forn_id", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "forn_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cadProd_CD", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cadProd_CD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_CNPJ", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_CNPJ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_desc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_desc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_qtd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_qtd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pedCompra_dataDeEntr", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDeEntr", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pedCompra_dataDeSaida", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDeSaida", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pedCompra_dataDevolucao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDevolucao", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDeEntr", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeEntr", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDeSaida", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDeSaida", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pedCompra_dataDevolucao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_dataDevolucao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pedCompra_CD", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "pedCompra_CD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -7782,9 +7705,9 @@ SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCom
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedComp" +
-                "ra_qtd, pedCompra_dataDeEntr, pedCompra_dataDeSaida, pedCompra_dataDevolucao FRO" +
-                "M auto33.pedidosdecompras";
+            this._commandCollection[0].CommandText = "SELECT pedCompra_CD, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCompra_qtd, p" +
+                "edCompra_dataDeEntr, pedCompra_dataDeSaida, pedCompra_dataDevolucao FROM auto33." +
+                "pedidosdecompras";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7845,61 +7768,49 @@ SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCom
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_pedCompra_CD, string Original_forn_id, string Original_cadProd_CD, string Original_pedCompra_CNPJ, string Original_pedCompra_desc, string Original_pedCompra_qtd, global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDeEntr, global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDeSaida, global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDevolucao) {
+        public virtual int Delete(int Original_pedCompra_CD, string Original_cadProd_CD, string Original_pedCompra_CNPJ, string Original_pedCompra_desc, string Original_pedCompra_qtd, string Original_pedCompra_dataDeEntr, string Original_pedCompra_dataDeSaida, string Original_pedCompra_dataDevolucao) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_pedCompra_CD));
-            if ((Original_forn_id == null)) {
-                throw new global::System.ArgumentNullException("Original_forn_id");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_forn_id));
-            }
             if ((Original_cadProd_CD == null)) {
                 throw new global::System.ArgumentNullException("Original_cadProd_CD");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_cadProd_CD));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_cadProd_CD));
             }
             if ((Original_pedCompra_CNPJ == null)) {
                 throw new global::System.ArgumentNullException("Original_pedCompra_CNPJ");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_pedCompra_CNPJ));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_pedCompra_CNPJ));
             }
             if ((Original_pedCompra_desc == null)) {
                 throw new global::System.ArgumentNullException("Original_pedCompra_desc");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_pedCompra_desc));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_pedCompra_desc));
             }
             if ((Original_pedCompra_qtd == null)) {
                 throw new global::System.ArgumentNullException("Original_pedCompra_qtd");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_pedCompra_qtd));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_pedCompra_qtd));
             }
-            if ((Original_pedCompra_dataDeEntr.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_pedCompra_dataDeEntr.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_pedCompra_dataDeSaida.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_pedCompra_dataDeSaida.Value));
+            if ((Original_pedCompra_dataDeEntr == null)) {
+                throw new global::System.ArgumentNullException("Original_pedCompra_dataDeEntr");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_pedCompra_dataDeEntr));
             }
-            if ((Original_pedCompra_dataDevolucao.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((System.DateTime)(Original_pedCompra_dataDevolucao.Value));
+            if ((Original_pedCompra_dataDeSaida == null)) {
+                throw new global::System.ArgumentNullException("Original_pedCompra_dataDeSaida");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_pedCompra_dataDeSaida));
+            }
+            if ((Original_pedCompra_dataDevolucao == null)) {
+                throw new global::System.ArgumentNullException("Original_pedCompra_dataDevolucao");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_pedCompra_dataDevolucao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7921,54 +7832,48 @@ SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCom
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string forn_id, string cadProd_CD, string pedCompra_CNPJ, string pedCompra_desc, string pedCompra_qtd, global::System.Nullable<global::System.DateTime> pedCompra_dataDeEntr, global::System.Nullable<global::System.DateTime> pedCompra_dataDeSaida, global::System.Nullable<global::System.DateTime> pedCompra_dataDevolucao) {
-            if ((forn_id == null)) {
-                throw new global::System.ArgumentNullException("forn_id");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(forn_id));
-            }
+        public virtual int Insert(string cadProd_CD, string pedCompra_CNPJ, string pedCompra_desc, string pedCompra_qtd, string pedCompra_dataDeEntr, string pedCompra_dataDeSaida, string pedCompra_dataDevolucao) {
             if ((cadProd_CD == null)) {
                 throw new global::System.ArgumentNullException("cadProd_CD");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(cadProd_CD));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(cadProd_CD));
             }
             if ((pedCompra_CNPJ == null)) {
                 throw new global::System.ArgumentNullException("pedCompra_CNPJ");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(pedCompra_CNPJ));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(pedCompra_CNPJ));
             }
             if ((pedCompra_desc == null)) {
                 throw new global::System.ArgumentNullException("pedCompra_desc");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(pedCompra_desc));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(pedCompra_desc));
             }
             if ((pedCompra_qtd == null)) {
                 throw new global::System.ArgumentNullException("pedCompra_qtd");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(pedCompra_qtd));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(pedCompra_qtd));
             }
-            if ((pedCompra_dataDeEntr.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(pedCompra_dataDeEntr.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((pedCompra_dataDeSaida.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(pedCompra_dataDeSaida.Value));
+            if ((pedCompra_dataDeEntr == null)) {
+                throw new global::System.ArgumentNullException("pedCompra_dataDeEntr");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(pedCompra_dataDeEntr));
             }
-            if ((pedCompra_dataDevolucao.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(pedCompra_dataDevolucao.Value));
+            if ((pedCompra_dataDeSaida == null)) {
+                throw new global::System.ArgumentNullException("pedCompra_dataDeSaida");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(pedCompra_dataDeSaida));
+            }
+            if ((pedCompra_dataDevolucao == null)) {
+                throw new global::System.ArgumentNullException("pedCompra_dataDevolucao");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(pedCompra_dataDevolucao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7991,128 +7896,108 @@ SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCom
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string forn_id, 
                     string cadProd_CD, 
                     string pedCompra_CNPJ, 
                     string pedCompra_desc, 
                     string pedCompra_qtd, 
-                    global::System.Nullable<global::System.DateTime> pedCompra_dataDeEntr, 
-                    global::System.Nullable<global::System.DateTime> pedCompra_dataDeSaida, 
-                    global::System.Nullable<global::System.DateTime> pedCompra_dataDevolucao, 
+                    string pedCompra_dataDeEntr, 
+                    string pedCompra_dataDeSaida, 
+                    string pedCompra_dataDevolucao, 
                     int Original_pedCompra_CD, 
-                    string Original_forn_id, 
                     string Original_cadProd_CD, 
                     string Original_pedCompra_CNPJ, 
                     string Original_pedCompra_desc, 
                     string Original_pedCompra_qtd, 
-                    global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDeEntr, 
-                    global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDeSaida, 
-                    global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDevolucao, 
+                    string Original_pedCompra_dataDeEntr, 
+                    string Original_pedCompra_dataDeSaida, 
+                    string Original_pedCompra_dataDevolucao, 
                     int pedCompra_CD) {
-            if ((forn_id == null)) {
-                throw new global::System.ArgumentNullException("forn_id");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(forn_id));
-            }
             if ((cadProd_CD == null)) {
                 throw new global::System.ArgumentNullException("cadProd_CD");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(cadProd_CD));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(cadProd_CD));
             }
             if ((pedCompra_CNPJ == null)) {
                 throw new global::System.ArgumentNullException("pedCompra_CNPJ");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(pedCompra_CNPJ));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(pedCompra_CNPJ));
             }
             if ((pedCompra_desc == null)) {
                 throw new global::System.ArgumentNullException("pedCompra_desc");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(pedCompra_desc));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(pedCompra_desc));
             }
             if ((pedCompra_qtd == null)) {
                 throw new global::System.ArgumentNullException("pedCompra_qtd");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(pedCompra_qtd));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(pedCompra_qtd));
             }
-            if ((pedCompra_dataDeEntr.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(pedCompra_dataDeEntr.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((pedCompra_dataDeSaida.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(pedCompra_dataDeSaida.Value));
+            if ((pedCompra_dataDeEntr == null)) {
+                throw new global::System.ArgumentNullException("pedCompra_dataDeEntr");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(pedCompra_dataDeEntr));
             }
-            if ((pedCompra_dataDevolucao.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(pedCompra_dataDevolucao.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_pedCompra_CD));
-            if ((Original_forn_id == null)) {
-                throw new global::System.ArgumentNullException("Original_forn_id");
+            if ((pedCompra_dataDeSaida == null)) {
+                throw new global::System.ArgumentNullException("pedCompra_dataDeSaida");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_forn_id));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(pedCompra_dataDeSaida));
             }
+            if ((pedCompra_dataDevolucao == null)) {
+                throw new global::System.ArgumentNullException("pedCompra_dataDevolucao");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(pedCompra_dataDevolucao));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_pedCompra_CD));
             if ((Original_cadProd_CD == null)) {
                 throw new global::System.ArgumentNullException("Original_cadProd_CD");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_cadProd_CD));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_cadProd_CD));
             }
             if ((Original_pedCompra_CNPJ == null)) {
                 throw new global::System.ArgumentNullException("Original_pedCompra_CNPJ");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_pedCompra_CNPJ));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_pedCompra_CNPJ));
             }
             if ((Original_pedCompra_desc == null)) {
                 throw new global::System.ArgumentNullException("Original_pedCompra_desc");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_pedCompra_desc));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_pedCompra_desc));
             }
             if ((Original_pedCompra_qtd == null)) {
                 throw new global::System.ArgumentNullException("Original_pedCompra_qtd");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_pedCompra_qtd));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_pedCompra_qtd));
             }
-            if ((Original_pedCompra_dataDeEntr.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_pedCompra_dataDeEntr.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_pedCompra_dataDeSaida.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_pedCompra_dataDeSaida.Value));
+            if ((Original_pedCompra_dataDeEntr == null)) {
+                throw new global::System.ArgumentNullException("Original_pedCompra_dataDeEntr");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_pedCompra_dataDeEntr));
             }
-            if ((Original_pedCompra_dataDevolucao.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_pedCompra_dataDevolucao.Value));
+            if ((Original_pedCompra_dataDeSaida == null)) {
+                throw new global::System.ArgumentNullException("Original_pedCompra_dataDeSaida");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_pedCompra_dataDeSaida));
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(pedCompra_CD));
+            if ((Original_pedCompra_dataDevolucao == null)) {
+                throw new global::System.ArgumentNullException("Original_pedCompra_dataDevolucao");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_pedCompra_dataDevolucao));
+            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(pedCompra_CD));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8133,25 +8018,8 @@ SELECT pedCompra_CD, forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCom
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string forn_id, 
-                    string cadProd_CD, 
-                    string pedCompra_CNPJ, 
-                    string pedCompra_desc, 
-                    string pedCompra_qtd, 
-                    global::System.Nullable<global::System.DateTime> pedCompra_dataDeEntr, 
-                    global::System.Nullable<global::System.DateTime> pedCompra_dataDeSaida, 
-                    global::System.Nullable<global::System.DateTime> pedCompra_dataDevolucao, 
-                    int Original_pedCompra_CD, 
-                    string Original_forn_id, 
-                    string Original_cadProd_CD, 
-                    string Original_pedCompra_CNPJ, 
-                    string Original_pedCompra_desc, 
-                    string Original_pedCompra_qtd, 
-                    global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDeEntr, 
-                    global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDeSaida, 
-                    global::System.Nullable<global::System.DateTime> Original_pedCompra_dataDevolucao) {
-            return this.Update(forn_id, cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCompra_qtd, pedCompra_dataDeEntr, pedCompra_dataDeSaida, pedCompra_dataDevolucao, Original_pedCompra_CD, Original_forn_id, Original_cadProd_CD, Original_pedCompra_CNPJ, Original_pedCompra_desc, Original_pedCompra_qtd, Original_pedCompra_dataDeEntr, Original_pedCompra_dataDeSaida, Original_pedCompra_dataDevolucao, Original_pedCompra_CD);
+        public virtual int Update(string cadProd_CD, string pedCompra_CNPJ, string pedCompra_desc, string pedCompra_qtd, string pedCompra_dataDeEntr, string pedCompra_dataDeSaida, string pedCompra_dataDevolucao, int Original_pedCompra_CD, string Original_cadProd_CD, string Original_pedCompra_CNPJ, string Original_pedCompra_desc, string Original_pedCompra_qtd, string Original_pedCompra_dataDeEntr, string Original_pedCompra_dataDeSaida, string Original_pedCompra_dataDevolucao) {
+            return this.Update(cadProd_CD, pedCompra_CNPJ, pedCompra_desc, pedCompra_qtd, pedCompra_dataDeEntr, pedCompra_dataDeSaida, pedCompra_dataDevolucao, Original_pedCompra_CD, Original_cadProd_CD, Original_pedCompra_CNPJ, Original_pedCompra_desc, Original_pedCompra_qtd, Original_pedCompra_dataDeEntr, Original_pedCompra_dataDeSaida, Original_pedCompra_dataDevolucao, Original_pedCompra_CD);
         }
     }
     

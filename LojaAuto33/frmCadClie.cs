@@ -19,8 +19,7 @@ namespace LojaAuto33
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            Controls.OfType<TextBox>().Concat<Control>(Controls.OfType<ComboBox>()).
-            Concat<Control>(Controls.OfType<CheckBox>()).ToList().ForEach(control => control.Text = "");
+          
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

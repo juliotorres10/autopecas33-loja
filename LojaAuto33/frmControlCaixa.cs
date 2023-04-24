@@ -64,7 +64,7 @@ namespace LojaAuto33
                     listBox1.Items.Add(row.Cells[3].Value.ToString());
                     double valorTotal = 0.00;
 
-                    listBox2.Items.Add(" " + row.Cells[0].Value.ToString() + " ");
+                    textBox1.Text = " " + row.Cells[0].Value.ToString() + " ";
 
                     foreach (string v in listBox1.Items)
                     {
@@ -122,19 +122,26 @@ namespace LojaAuto33
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            controlCaixaBindingSource.EndEdit();
-            controlCaixaTableAdapter.Update(autopeca33DataSet.controlCaixa);
-            this.controlCaixaTableAdapter.Fill(this.autopeca33DataSet.controlCaixa);
-            controlCaixaBindingSource.MoveLast();
+            try
+            {
+                this.Validate();
+                controlCaixaBindingSource.EndEdit();
+                controlCaixaTableAdapter.Update(autopeca33DataSet.controlCaixa);
+                this.controlCaixaTableAdapter.Fill(this.autopeca33DataSet.controlCaixa);
+                controlCaixaBindingSource.MoveLast();
 
-            //chamar um novo registro
-            controlCaixaBindingSource.AddNew();
+                //chamar um novo registro
+                controlCaixaBindingSource.AddNew();
 
-            textBox2.Focus();
+                textBox2.Focus();
 
-            //aparece a mensagem quando der certo
-            MessageBox.Show("Compra finalizada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
+                //aparece a mensagem quando der certo
+                MessageBox.Show("Compra finalizada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
+            }
+            catch (NoNullAllowedException)
+            {
+                MessageBox.Show("O carrinho não pode estar vazio", "Erro na compra", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BTNvOLTAR_Click_1(object sender, EventArgs e)

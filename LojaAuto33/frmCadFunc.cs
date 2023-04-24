@@ -59,5 +59,10 @@ namespace LojaAuto33
             //    textBox1.Text = "";
             //  textbox.Text = (" ");
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

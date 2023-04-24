@@ -17,7 +17,7 @@ namespace LojaAuto33
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmControlCaixa());
+            Application.Run(new frmPesqCadFunc());
         }
     }
 }

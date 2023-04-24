@@ -191,6 +191,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(199, 20);
             this.textBox5.TabIndex = 4;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -229,7 +230,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(75, 466);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(103, 26);
-            this.btnCadastrar.TabIndex = 9;
+            this.btnCadastrar.TabIndex = 10;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -239,7 +240,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(288, 466);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(93, 26);
-            this.btnPesquisar.TabIndex = 11;
+            this.btnPesquisar.TabIndex = 12;
             this.btnPesquisar.Text = "PESQUISAR";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
@@ -248,7 +249,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(387, 466);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(84, 26);
-            this.btnAlterar.TabIndex = 12;
+            this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "ALTERAR";
             this.btnAlterar.UseVisualStyleBackColor = true;
             // 
@@ -257,7 +258,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(477, 469);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(93, 23);
-            this.btnVoltar.TabIndex = 13;
+            this.btnVoltar.TabIndex = 14;
             this.btnVoltar.Text = "VOLTAR";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -267,7 +268,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(184, 466);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 26);
-            this.btnLimpar.TabIndex = 10;
+            this.btnLimpar.TabIndex = 11;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -282,7 +283,7 @@
             this.lblSenha.Location = new System.Drawing.Point(35, 394);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(38, 13);
-            this.lblSenha.TabIndex = 14;
+            this.lblSenha.TabIndex = 9;
             this.lblSenha.Text = "Senha";
             // 
             // textBox10
@@ -291,7 +292,7 @@
             this.textBox10.Location = new System.Drawing.Point(159, 387);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(200, 20);
-            this.textBox10.TabIndex = 15;
+            this.textBox10.TabIndex = 9;
             // 
             // frmCadFunc
             // 

@@ -101,5 +101,10 @@ namespace LojaAuto33
                 MessageBox.Show("Por favor, preencha apenas um campo, ou o nome ou o id", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

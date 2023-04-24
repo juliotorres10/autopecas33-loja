@@ -1,6 +1,6 @@
 ﻿namespace LojaAuto33
 {
-    partial class frmPescCadFornec
+    partial class frmPesqCadFornec
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblID = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.lblRepres = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnIDPess = new System.Windows.Forms.Button();
             this.btnPesqPess = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
             this.cadastrodeFornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cadastrodeFornecedoresTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.cadastrodeFornecedoresTableAdapter();
+            this.autopeca33DataSet = new LojaAuto33.Autopeca33DataSet();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fornidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fornCNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fornendereçoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +47,11 @@
             this.fornemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forncepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fornRepresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
+            this.cadastrodeFornecedoresTableAdapter = new LojaAuto33.Autopeca33DataSetTableAdapters.cadastrodeFornecedoresTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cadastrodeFornecedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -62,14 +63,14 @@
             this.lblID.TabIndex = 17;
             this.lblID.Text = "ID";
             // 
-            // lblNome
+            // lblRepres
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(67, 44);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 16;
-            this.lblNome.Text = "Nome";
+            this.lblRepres.AutoSize = true;
+            this.lblRepres.Location = new System.Drawing.Point(55, 42);
+            this.lblRepres.Name = "lblRepres";
+            this.lblRepres.Size = new System.Drawing.Size(77, 13);
+            this.lblRepres.TabIndex = 16;
+            this.lblRepres.Text = "Representante";
             // 
             // btnVoltar
             // 
@@ -107,6 +108,7 @@
             this.btnPesqPess.TabIndex = 2;
             this.btnPesqPess.Text = "PESQUISA PESSOA";
             this.btnPesqPess.UseVisualStyleBackColor = true;
+            this.btnPesqPess.Click += new System.EventHandler(this.btnPesqPess_Click);
             // 
             // textBox2
             // 
@@ -117,10 +119,21 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cadastrodeFornecedoresBindingSource, "forn_Repres", true));
             this.textBox1.Location = new System.Drawing.Point(138, 39);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(191, 20);
             this.textBox1.TabIndex = 0;
+            // 
+            // cadastrodeFornecedoresBindingSource
+            // 
+            this.cadastrodeFornecedoresBindingSource.DataMember = "cadastrodeFornecedores";
+            this.cadastrodeFornecedoresBindingSource.DataSource = this.autopeca33DataSet;
+            // 
+            // autopeca33DataSet
+            // 
+            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
+            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView1
             // 
@@ -137,22 +150,8 @@
             this.dataGridView1.DataSource = this.cadastrodeFornecedoresBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(31, 144);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 188);
+            this.dataGridView1.Size = new System.Drawing.Size(740, 203);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // autopeca33DataSet
-            // 
-            this.autopeca33DataSet.DataSetName = "Autopeca33DataSet";
-            this.autopeca33DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cadastrodeFornecedoresBindingSource
-            // 
-            this.cadastrodeFornecedoresBindingSource.DataMember = "cadastrodeFornecedores";
-            this.cadastrodeFornecedoresBindingSource.DataSource = this.autopeca33DataSet;
-            // 
-            // cadastrodeFornecedoresTableAdapter
-            // 
-            this.cadastrodeFornecedoresTableAdapter.ClearBeforeFill = true;
             // 
             // fornidDataGridViewTextBoxColumn
             // 
@@ -197,13 +196,27 @@
             this.fornRepresDataGridViewTextBoxColumn.HeaderText = "Marca Representante";
             this.fornRepresDataGridViewTextBoxColumn.Name = "fornRepresDataGridViewTextBoxColumn";
             // 
-            // frmPescCadFornec
+            // cadastrodeFornecedoresTableAdapter
+            // 
+            this.cadastrodeFornecedoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(402, 407);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 31);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "DELETAR";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // frmPesqCadFornec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.lblRepres);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnIDPess);
@@ -211,12 +224,12 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "frmPescCadFornec";
+            this.Name = "frmPesqCadFornec";
             this.Text = "PESQUISA CADASTRO FORNECEDOR";
             this.Load += new System.EventHandler(this.frmPescCadFornec_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cadastrodeFornecedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autopeca33DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +238,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblRepres;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnIDPess;
@@ -243,5 +256,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fornemailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn forncepDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fornRepresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

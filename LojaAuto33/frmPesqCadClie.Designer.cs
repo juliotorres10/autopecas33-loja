@@ -69,10 +69,10 @@
             this.clieendDataGridViewTextBoxColumn,
             this.clieCEPDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.cadastrodeclientesBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(119, 164);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 142);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(595, 188);
+            this.dataGridView1.Size = new System.Drawing.Size(703, 219);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -141,6 +141,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(266, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 

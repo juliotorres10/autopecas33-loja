@@ -116,6 +116,7 @@
             this.btnPesq.TabIndex = 9;
             this.btnPesq.Text = "PESQUISAR";
             this.btnPesq.UseVisualStyleBackColor = true;
+            this.btnPesq.Click += new System.EventHandler(this.btnPesq_Click);
             // 
             // btnAlterar
             // 
@@ -270,5 +271,7 @@
         private Autopeca33DataSet autopeca33DataSet;
         private System.Windows.Forms.BindingSource cadastrodeFornecedoresBindingSource;
         private Autopeca33DataSetTableAdapters.cadastrodeFornecedoresTableAdapter cadastrodeFornecedoresTableAdapter;
+        //   private Autopeca33DataSet autopeca33DataSet;
+        //  private Autopeca33DataSetTableAdapters.cadastrodeFornecedoresTableAdapter cadastrodeFornecedoresTableAdapter;
     }
 }
